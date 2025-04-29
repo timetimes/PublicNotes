@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "python"
             }
+          },
+          {
+            "id": "5e0750b1f42c71c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/计算机/软件/代码版本管理Git.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "代码版本管理Git"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -142,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/计算机/语言/编程语言/python/python.md",
+                "file": "docs/计算机/软件/代码版本管理Git.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "python 的大纲"
+              "title": "代码版本管理Git 的大纲"
             }
           }
         ],
@@ -168,10 +183,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "bbd974d9325ad681",
+  "active": "5e0750b1f42c71c5",
   "lastOpenFiles": [
-    "docs/计算机/软件/代码版本管理Git.md",
     "docs/计算机/语言/编程语言/python/python.md",
+    "docs/计算机/软件/代码版本管理Git.md",
     "site/search/search_index.json",
     "site/search",
     "site/计算机/软件/虚拟机/index.html",
