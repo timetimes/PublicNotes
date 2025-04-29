@@ -1,0 +1,56 @@
+site_name: notes
+
+nav:
+- 数学:
+  - 代数:
+    - 抽象代数: 数学\代数\抽象代数.md
+- 计算机:
+  - 语言:
+    - Python: 计算机\语言\编程语言\python\python.md
+    - Html,Css: 计算机\语言\其他语法\HTML,CSS.md
+
+theme:
+  name: material  # 使用 Material 主题
+  language: zh  # 设置站点语言为中文
+  favicon: assets/favicon.png  # 设置网站标签页图标
+  icon:
+    logo: logo  # 设置站点 logo 图标
+  font:
+    text: Roboto  # 正文字体
+    code: Roboto Mono  # 代码字体
+
+  features:
+    # - navigation.instant  # 启用即时导航功能
+    - navigation.sections  # 启用导航部分功能
+    - navigation.tabs  # 启用导航标签功能
+    - content.code.copy  # 启用代码块复制功能
+    - navigation.tracking  # 启用导航跟踪功能
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white  # 浅色模式主色调
+      accent: purple  # 浅色模式强调色
+      toggle:
+        icon: material/weather-sunny # 设置浅色模式下的切换按钮图标
+        name: 切换到深色模式  # 设置浅色模式下的切换按钮名称
+      
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black  # 深色模式主色调
+      accent: pink  # 深色模式强调色
+      toggle:
+        icon: material/weather-night  # 设置深色模式下的切换按钮图标
+        name: 切换到浅色模式  # 设置深色模式下的切换按钮名称
+
+  static_templates:
+    - 404.html  # 自定义 404 页面
+
+  include_search_page: false  # 不包含 MkDocs 的搜索页面
+  search_index_only: true  # 仅包含搜索索引
+
+markdown_extensions:
+  - pymdownx.arithmatex
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML

@@ -5443,6 +5443,8 @@ FastAPI 是一个用于构建 API 的现代、快速（高性能）的 web 框�
 
 **初始化项目**：==`mkdocs new <项目名>`==
 生成一个<项目名>文件夹，里面有 `mkdocs.yml`配置文件，以及一个名为 `docs`的文件夹，它将包含你的文档文件。现在 `docs`文件夹只包含一个名为 `index.md`的文档页面。
+直接在当前目录下运行 `mkdocs new .` 命令将已有的文件夹初始化为 MkDocs 项目而不创建新文件夹
+`index.md` 文件不需要显式添加到 `nav` 配置中，因为它会自动作为主页加载。
 
 MkDocs附带一个内置的开发服务器，可以让你在处理文档时预览文档。
 确保 `mkdocs.yml`配置文件位于同一目录中
@@ -5458,13 +5460,13 @@ MkDocs附带一个内置的开发服务器，可以让你在处理文档时预�
 ```yml
 site_name: MkLorum
 nav:
-- Home: 'index.md'
+- Home: index.md
 - User Guide:
-    - 'Writing your docs': 'writing-your-docs.md'
-    - 'Styling your docs': 'styling-your-docs.md'
+    - Writing your docs: writing-your-docs.md
+    - Styling your docs: styling-your-docs.md
 - About:
-    - 'License': 'license.md'
-    - 'Release Notes': 'release-notes.md'
+    - License: license.md
+    - Release Notes: release-notes.md
 theme: readthedocs
 ```
 
@@ -5528,6 +5530,50 @@ plugins:
 开发插件：
 插件必须用Python编写
 插件需要打包为Python库（分布在PyPI上，与MkDocs分开），每个插件必须通过setuptools entry_point注册为插件。
+
+==数学公式支持==：
+
+```yml
+markdown_extensions:
+  - pymdownx.arithmatex
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+```
+
+```yml
+markdown_extensions:
+  - pymdownx.arithmatex:  # 启用数学公式扩展
+      generic: true  # 使用通用数学公式渲染器
+
+extra_css:
+- themes/css/custom.css
+- themes/css/simpleLightbox.min.css
+- themes/css/pied_piper.css
+- https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css
+ 
+extra_javascript:
+- themes/js/custom.js
+- themes/js/simpleLightbox.min.js
+- themes/js/optionalConfig.js
+- themes/js/mermaidloader.js
+- themes/js/umlconvert.js
+- themes/js/mathjax.js
+- themes/js/katex.js
+- https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js
+- https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/diagram-definition.0faef4c2.min.js
+- https://cdn.jsdelivr.net/npm/markdown-it-plantuml@1.4.1/index.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml-full.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg-full.js
+- https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
+```
 
 **生成网站**：==`mkdocs build --clean`== --clean参数用于删除陈旧的文件
 

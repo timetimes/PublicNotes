@@ -170,6 +170,11 @@ github下载加速网站：
 https://gh-proxy.com/
 [Github Proxy 文件代理加速](https://github.akams.cn/)
 
+
+GitHub Actions 是一种自动化工具，可以帮助开发者在代码仓库中定义和执行各种任务。工作流是 GitHub Actions 的核心概念，它由一个或多个作业组成，每个作业包含一系列步骤。工作流文件使用 YAML 语法，并且必须存储在仓库的 _.github/workflows_ 目录中。
+
+Actions——跳过——.github/workflows/ci.yml
+
 ## 其他命令
 
 更新git版本
