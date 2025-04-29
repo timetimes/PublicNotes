@@ -5450,6 +5450,10 @@ MkDocs附带一个内置的开发服务器，可以让你在处理文档时预�
 确保 `mkdocs.yml`配置文件位于同一目录中
 运行==`mkdocs serve`==命令启动服务器，在浏览器中打开 `http://127.0.0.1:8000/`，你将看到显示的默认主页
 
+`site_url` 是 MkDocs 配置文件 (`mkdocs.yml`) 中的一个可选字段，用于指定网站的根 URL。它的主要作用是为生成的站点提供一个绝对路径的基础 URL
+use_directory_urls: true默认为true，访问 URL 时不需要显式地添加 `.html` 后缀
+如`http://127.0.0.1:8000/notes/python` 会自动映射到 `python.html`
+
 **主题**：
 配置文件 `mkdocs.yml`
 `site_name: <站点名称>`
@@ -5460,9 +5464,8 @@ MkDocs附带一个内置的开发服务器，可以让你在处理文档时预�
 ```yml
 site_name: MkLorum
 nav:
-- Home: index.md
 - User Guide:
-    - Writing your docs: writing-your-docs.md
+    - Writing your docs: write/writing-your-docs.md
     - Styling your docs: styling-your-docs.md
 - About:
     - License: license.md
@@ -5600,6 +5603,15 @@ jobs:
 ```
 
 此时，当一个新的提交推送到 `master`或 `main`时，我们的静态网站的内容将自动生成并完成部署。网站将在不久后部署到 `<username>.github.io/<repository>`
+
+如果几分钟后 GitHub Page 没有出现，请转到你的存储库的设置并确保你的 Pages 的发布源分支设置为gh-pages。
+
+当你部署到 GitHub Pages 时，如果你的仓库不是一个用户或组织的主页仓库（例如 `username.github.io`），那么生成的网站会被托管在一个子路径下，例如 `https://username.github.io/repository-name/`。这需要在 mkdocs.yml中正确配置 `site_url` 和 `use_directory_urls`。
+
+```yml
+site_url: https://username.github.io/repository-name/
+use_directory_urls: false
+```
 
 如果是倾向于手动部署网站，请在包含 `mkdocs.yml`文件的目录中运行以下命令：
 `mkdocs gh-deploy --force`

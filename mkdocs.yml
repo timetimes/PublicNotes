@@ -1,13 +1,14 @@
 site_name: notes
+site_url: https://timetimes.github.io/notes/
 
 nav:
 - 数学:
   - 代数:
-    - 抽象代数: 数学\代数\抽象代数.md
+    - 抽象代数: 数学/代数/抽象代数.md
 - 计算机:
   - 语言:
-    - Python: 计算机\语言\编程语言\python\python.md
-    - Html,Css: 计算机\语言\其他语法\HTML,CSS.md
+    - Python: 计算机/语言/编程语言/python/python.md
+    - Html,Css: 计算机/语言/其他语法/HTML,CSS.md
 
 theme:
   name: material  # 使用 Material 主题
