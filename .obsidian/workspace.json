@@ -1,0 +1,361 @@
+{
+  "main": {
+    "id": "12688b0517b8031c",
+    "type": "split",
+    "children": [
+      {
+        "id": "b3be43cb9f0105c9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2b3dadece6321e6b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数学/0数学/数学基础.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "数学基础"
+            }
+          },
+          {
+            "id": "9c1a88c8c7fc45e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数学/拓扑学/点集拓扑.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "点集拓扑"
+            }
+          },
+          {
+            "id": "ed585454eb39b111",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算机/计算机原理/编码.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "编码"
+            }
+          },
+          {
+            "id": "1dcb4bbba1bd46e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数学/计算数学/计算几何.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "计算几何"
+            }
+          },
+          {
+            "id": "55757974db1f3020",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数学/运筹学/最优化基础.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "最优化基础"
+            }
+          },
+          {
+            "id": "49fbab60ec913d0d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数学/0数学/欧几里得几何.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "欧几里得几何"
+            }
+          },
+          {
+            "id": "7adce0772ae30d9e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数学/分析/常微分方程.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "常微分方程"
+            }
+          },
+          {
+            "id": "4adfcb19f0d34f55",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算机/语言/其他语法/HTML,CSS.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "HTML,CSS"
+            }
+          },
+          {
+            "id": "8cf0f010056bba9c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算机/语言/编程语言/python/python.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "python"
+            }
+          },
+          {
+            "id": "65442e6faba9067a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数学/计算数学/计算机辅助证明.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "计算机辅助证明"
+            }
+          },
+          {
+            "id": "993a2b852f539210",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算机/软件/代码版本管理Git.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "代码版本管理Git"
+            }
+          }
+        ],
+        "currentTab": 10
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fb1cdb7038ae8fc3",
+    "type": "split",
+    "children": [
+      {
+        "id": "490f31c94ff0636a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4788db442f57fbaf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "934c78d095ea92a1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "wsl",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "e53bee54c8984329",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 222.5
+  },
+  "right": {
+    "id": "86f6aa8d85f3c631",
+    "type": "split",
+    "children": [
+      {
+        "id": "91bb847228ab6f0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d974686b7e42dbe2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "计算机/软件/3D软件blender.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "3D软件blender 的反向链接列表"
+            }
+          },
+          {
+            "id": "7c0779fef03126be",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "计算机/软件/3D软件blender.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "3D软件blender 的出链列表"
+            }
+          },
+          {
+            "id": "8f07c58ff83213e0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "3671e1584bdb7218",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "计算机/软件/代码版本管理Git.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "代码版本管理Git 的大纲"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "993a2b852f539210",
+  "lastOpenFiles": [
+    "数学/计算数学/计算机辅助证明.md",
+    "人类/艺术/游戏/棋牌桌游.md",
+    "计算机/语言/编程语言/python/python.md",
+    "数学/0数学/类型论.md",
+    "数学/拓扑学/点集拓扑.md",
+    "计算机/计算机安全/网络安全/抓包.md",
+    "计算机/软件/fiddler.md",
+    "数学/0数学/数学基础.md",
+    "计算机/软件/sunshine+moonlight.md",
+    "人类/艺术/文字/小说.md",
+    "人类/艺术/文字/剧本.md",
+    "计算机/软件/代码版本管理Git.md",
+    "计算机/计算机原理/操作系统/常用操作系统/windows.md",
+    "计算机/语言/编程语言/JavaScript/JavaScript.md",
+    "计算机/语言/其他语法/HTML,CSS.md",
+    "数学/0数学/数学思维.md",
+    "数学/0数学/定理和方法.md",
+    "数学/运筹学/最优化基础.md",
+    "计算机/语言/其他语法/markdown.md",
+    "数学/0数学/欧几里得几何.md",
+    "计算机/语言/其他语法/latex.md",
+    "数学/分析/常微分方程.md",
+    "计算机/语言/其他语法/正则表达式.md",
+    "计算机/计算机原理/编码.md",
+    "数学/0数学/数学猜想.md",
+    "计算机/开发/网站开发/网站前端/前端框架.md",
+    "人类/社会",
+    "计算机/开发/网站开发",
+    "人类/医学",
+    "计算机/软件/image/Pasted image 20250320155144.png",
+    "计算机/软件/image",
+    "计算机/语言/编程语言/其他编程语言",
+    "计算机/语言/语言",
+    "计算机/开发/游戏开发/image/Pasted image 20250316022434.png",
+    "计算机/开发/游戏开发/image",
+    "人类/艺术/游戏/image/0.svg",
+    "未命名.canvas",
+    "计算机/计算机原理/硬件",
+    "计算机/计算机原理/操作系统/常用操作系统",
+    "计算机/计算机安全/image/二维码.jpg",
+    "计算机/计算机安全/image/普通图片.jpg",
+    "计算机/语言/编程语言/python/msyh.ttf",
+    "计算机/语言/编程语言/JavaScript/image/javascrpt/DOM.png",
+    "计算机/语言/其他语法/image/latex_page-0003.jpg",
+    "计算机/语言/其他语法/image/latex_page-0002.jpg",
+    "计算机/语言/其他语法/image/latex_page-0001.jpg"
+  ]
+}

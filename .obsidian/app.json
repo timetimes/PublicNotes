@@ -1,0 +1,24 @@
+{
+  "vimMode": false,
+  "newFileLocation": "current",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": false,
+  "attachmentFolderPath": "./image",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "defaultViewMode": "preview",
+  "livePreview": false,
+  "showLineNumber": true,
+  "smartIndentList": true,
+  "strictLineBreaks": false,
+  "autoPairMarkdown": true,
+  "propertiesInDocument": "visible",
+  "useTab": false,
+  "promptDelete": false,
+  "alwaysUpdateLinks": true
+}
