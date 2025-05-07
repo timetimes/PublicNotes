@@ -19,6 +19,12 @@ mklink /D C:\Users\dom\.elan\toolchains\my-lean4 C:\Users\dom\.elan\toolchains\s
 在 PowerShell 中使用 `cmd /c`
 cmd /c mklink /D C:\Users\dom\.elan\toolchains\my-lean4 C:\Users\dom\.elan\toolchains\stable
 
+
+Windows 的 CMD 或 PowerShell 默认不会保存永久历史，关闭窗口后就清空了，相比之下，macOS 或 Linux 会保存在 .bash_history 或 .zsh_history 中。
+但在同一个会话中你可以：按 ↑ 和 ↓ 键查看历史命令；
+cmd：使用 doskey /history 显示当前会话的命令历史。
+PowerShell 使用：Get-History
+
 ## WSL
 
 [安装 WSL | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/wsl/install)
@@ -120,3 +126,38 @@ RDP输入ip:3390
 
 图吧工具箱
 DiskGenius   给C盘扩容
+
+## 微软工具
+
+### PowerToys
+
+[Microsoft PowerToys | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/powertoys/)
+
+Microsoft PowerToys 是一组实用工具，可帮助高级用户调整和简化其 Windows 体验，从而提高工作效率。
+
+[Always On Top](https://learn.microsoft.com/zh-cn/windows/powertoys/always-on-top) 使你能够使用快捷键 (⊞ Win+Ctrl+T) 将窗口固定在其他窗口之上。
+File Locksmith](https://learn.microsoft.com/zh-cn/windows/powertoys/file-locksmith) 是一个 Windows shell 扩展，用于检查哪些文件正在使用中以及由哪些进程使用。 右键单击 File Explorer 中的一个或多个选定文件，并选择**使用 Locksmith 解锁**。
+
+### Process Monitor
+
+[Process Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)）（ProcMon）是微软 Sysinternals 套件中的一款强大的系统级工具，用于监控 **实时的文件系统、注册表、进程和网络活动**。 
+下载并解压 `Procmon.zip`
+
+双击运行 `Procmon.exe`（建议右键管理员身份运行）
+启动后，默认会显示系统中所有活动，非常多，需要过滤。
+- 
+点击顶部工具栏的 Filter（过滤器）按钮或按快捷键 `Ctrl + L`
+-设置过滤规则，例如要监控 VSCode 是否创建了特定路径下的文件
+Path contains C:\Users\YourName\Documents\Projects\ then Include
+
+过滤器设好后，点击工具栏左上角的“开始捕捉”按钮（`Ctrl + E`）
+Process Monitor 会实时记录：
+- 哪个进程（如 `Code.exe`, `WeChat.exe`, `explorer.exe`）
+- 在什么时间
+- 访问了什么文件路径
+- 是创建、读取、写入，还是删除
+
+点击“停止捕捉”按钮以免日志过多
+可右键某一条，选择“Jump To”来查看原始位置
+- 
+

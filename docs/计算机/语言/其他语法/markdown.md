@@ -617,6 +617,7 @@ $$ P=\left(A=2|\frac{A^2}{B}>4\right) $$ $$ P=\left(A=2\middle|\frac{A^2}{B}>4\r
 \mathbf的渲染效果是加粗的正体字符，而\boldsymbol的渲染效果是加粗的斜体字符
 
 $\tbinom{n}{r}$ $C_{n}^{r}$ ${n \choose r}$
+$\varnothing\emptyset$
 
 [^1]: Markdown 是一种纯文本标记语言
     

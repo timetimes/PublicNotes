@@ -142,6 +142,49 @@ def add(x: int, y: int) -> int:
 a2: int = 123 # a2为int型变量，赋值为123
 ```
 
+
+为了限制`score`的范围，可以通过一个`set_score()`方法来设置成绩，再通过一个`get_score()`来获取成绩
+
+```python
+class Student(object):
+    def get_score(self):
+         return self._score
+
+    def set_score(self, value):
+        if not isinstance(value, int):
+            raise ValueError('score must be an integer!')
+        if value < 0 or value > 100:
+            raise ValueError('score must between 0 ~ 100!')
+        self._score = value
+```
+
+上面的调用方法又略显复杂，没有直接用属性这么直接简单。
+
+Python内置的`@property`装饰器负责把一个方法变成属性调用
+`@property`本身又创建了另一个装饰器`@score.setter`，负责把一个setter方法变成属性赋值
+
+```python
+class Student(object):
+    @property
+    def score(self):
+        return self._score
+
+    @score.setter
+    def score(self, value):
+        if not isinstance(value, int):
+            raise ValueError('score must be an integer!')
+        if value < 0 or value > 100:
+            raise ValueError('score must between 0 ~ 100!')
+        self._score = value
+```
+
+```plain
+>>> s = Student()
+>>> s.score = 60 # OK，实际转化为s.score(60)
+>>> s.score # 实际转化为s.score()
+60
+```
+
 ### 输入和输出
 
 input("输入文字")

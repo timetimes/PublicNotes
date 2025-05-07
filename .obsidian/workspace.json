@@ -4,17 +4,87 @@
     "type": "split",
     "children": [
       {
-        "id": "4a089221e34ecd47",
+        "id": "29b58a071edbca42",
         "type": "tabs",
         "children": [
           {
-            "id": "bbd974d9325ad681",
+            "id": "363952e26e81acd0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/数学/分析/常微分方程.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "常微分方程"
+            }
+          },
+          {
+            "id": "4f10f1e49fd8afe9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/数学/拓扑学/点集拓扑.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "点集拓扑"
+            }
+          },
+          {
+            "id": "e7732fa867eeb226",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/数学/0数学/解题方法/分析/数学分析.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "数学分析"
+            }
+          },
+          {
+            "id": "eaf4c8210237da75",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/计算机/语言/其他语法/markdown.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "markdown"
+            }
+          },
+          {
+            "id": "21b474861a007c42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/数学/分析/数学分析.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "数学分析"
+            }
+          },
+          {
+            "id": "a4a7fb2d5da79010",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "docs/计算机/语言/编程语言/python/python.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
@@ -22,21 +92,35 @@
             }
           },
           {
-            "id": "5e0750b1f42c71c5",
+            "id": "0eaee5808a31f62f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/计算机/软件/代码版本管理Git.md",
-                "mode": "preview",
+                "file": "docs/计算机/计算机安全/Kail.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "代码版本管理Git"
+              "title": "Kail"
+            }
+          },
+          {
+            "id": "e710ff50382544e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/计算机/计算机原理/浏览器.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "浏览器"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -50,13 +134,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4788db442f57fbaf",
+            "id": "aac503a6db2d5905",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -68,7 +152,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "wsl",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -157,13 +241,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/计算机/软件/代码版本管理Git.md",
+                "file": "docs/计算机/计算机安全/Kail.md",
                 "followCursor": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "代码版本管理Git 的大纲"
+              "title": "Kail 的大纲"
             }
           }
         ],
@@ -183,10 +267,34 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5e0750b1f42c71c5",
+  "active": "0eaee5808a31f62f",
   "lastOpenFiles": [
+    "docs/人类/素材/信息伪装.md",
+    "docs/计算机/计算机原理/浏览器.md",
+    "docs/计算机/计算机原理/计算机网络.md",
+    "docs/计算机/计算机安全/Kail.md",
     "docs/计算机/语言/编程语言/python/python.md",
-    "docs/计算机/软件/代码版本管理Git.md",
+    "docs/计算机/计算机原理/操作系统/常用操作系统/Linux.md",
+    "docs/计算机/计算机安全/网络安全/匿名网络技术.md",
+    "docs/计算机/计算机安全/网络安全/区块链技术.md",
+    "docs/计算机/计算机安全/逆向工程/a.md",
+    "docs/人类/社会/黑产.md",
+    "docs/数学/0数学/解题方法/分析/数学分析.md",
+    "docs/数学/分析/数学分析.md",
+    "docs/数学/分析/常微分方程.md",
+    "docs/人类/医学/药品.md",
+    "docs/人类/医学/现代医学.md",
+    "docs/人类/社会/广告.md",
+    "docs/人类/哲学/政治.md",
+    "docs/数学/拓扑学/点集拓扑.md",
+    "docs/人类/艺术/文字/小说.md",
+    "docs/计算机/计算机原理/操作系统/常用操作系统/windows.md",
+    "docs/人类/艺术/视频/动画.md",
+    "docs/计算机/语言/其他语法/markdown.md",
+    "docs/数学/拓扑学/几何拓扑.md",
+    "docs/数学/拓扑学/代数拓扑.md",
+    "docs/数学/0数学/数学基础.md",
+    "docs/index.md",
     "site/search/search_index.json",
     "site/search",
     "site/计算机/软件/虚拟机/index.html",
@@ -207,30 +315,6 @@
     "site/工科/工程基础/image/机械制造/工艺尺寸链1.png",
     "site/工科/工程基础/image/机械制造/定位误差3.png",
     "site/工科/工程基础/image/机械制造/定位误差2.png",
-    "docs/index.md",
-    "计算机/语言/编程语言/python/python.md",
-    "docs/数学/0数学/解题方法/分析/数学分析.md",
-    "docs/数学/0数学/解题方法/几何/平面几何.md",
-    "docs/数学/0数学/解题方法/代数/高等代数.md",
-    "docs/数学/0数学/解题方法/代数/不等式.md",
-    "docs/数学/0数学/解题方法/代数/初等数学.md",
-    "docs/数学/0数学/数学史/数学简史.md",
-    "docs/数学/运筹学/最优化基础.md",
-    "docs/数学/计算数学/计算机辅助证明.md",
-    "docs/数学/计算数学/计算几何.md",
-    "docs/数学/计算数学/符号计算.md",
-    "docs/数学/计算数学/数值计算.md",
-    "docs/数学/概率与统计学/随机过程.md",
-    "docs/数学/概率与统计学/概率论与数理统计.md",
-    "docs/数学/概率与统计学/数理统计.md",
-    "docs/数学/组合数学/图论.md",
-    "docs/数学/数论/初等数论.md",
-    "docs/数学/数论/代数数论.md",
-    "docs/数学/拓扑学/点集拓扑.md",
-    "docs/数学/分析/常微分方程.md",
-    "docs/数学/分析/数学分析.md",
-    "docs/数学/分析/实分析.md",
-    "docs/数学/几何/微分几何.md",
     "未命名.canvas"
   ]
 }
