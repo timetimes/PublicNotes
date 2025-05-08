@@ -55,7 +55,14 @@ theme:
   search_index_only: true  # 仅包含搜索索引
 
 markdown_extensions:
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex # 识别数学公式，交由 MathJax 或 KaTeX 渲染
+  - pymdownx.highlight: # 代码块代码高亮
+      anchor_linenums: true # 显示行号，并且每一行有跳转锚点
+      line_spans: __span  # 给每一行代码一个 span 标签
+      pygments_lang_class: true # 在<code>标签上加上语言类方便样式或前端插件识别语言类型
+  - pymdownx.inlinehilite # 支持文内高亮代码（比如：==highlighted code==）
+  - pymdownx.snippets # 允许从其他文件中包含代码片段
+  - pymdownx.superfences # 增强代码块语法，支持嵌套语法块、额外的代码块类型
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
