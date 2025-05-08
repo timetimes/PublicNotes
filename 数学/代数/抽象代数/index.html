@@ -1,0 +1,1728 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>抽象代数（近世代数） - notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              抽象代数（近世代数）
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="purple"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="pink"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python/python/" class="md-tabs__link">
+          
+  
+  
+  计算机
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/" class="md-tabs__link">
+          
+  
+  
+  数学
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            计算机
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    语言
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%AD%E8%A8%80/%E5%85%B6%E4%BB%96%E8%AF%AD%E6%B3%95/HTML%2CCSS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Html,Css
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/JavaScript/JavaScript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Javascript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数学
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            数学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    代数
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            代数
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    线性代数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    分析
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%86%E6%9E%90/%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    常微分方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    概率论
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            概率论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    概率论与数理统计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础知识
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      集合
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      映射
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="映射">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      代数运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      同态与同构
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      等价关系与集合的分类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      群
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="群">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      群的同态同构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      重要的群
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="重要的群">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      循环群
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      变换群
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      置换群
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      陪集与拉格朗日定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      群作用于集合
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      正规子群和商群
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      群同态基本定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      群同构定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sylow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sylow定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      有限交换群基本定理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      环
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="环">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      环的同态同构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      除环和域
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      重要的环
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="重要的环">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#n" class="md-nav__link">
+    <span class="md-ellipsis">
+      模n剩余类环
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      多项式环
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      理想
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      商环
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      环同态基本定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      环同构定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      素理想和极大理想
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      非交换环
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      唯一分解整环
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      域的扩张
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="域的扩张">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      单扩域
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      代数扩域、有限次扩域
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      多项式的分裂域
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      有限域
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      伽罗瓦理论
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">抽象代数（近世代数）</h1>
+<p>为什么以结合律为基础：
+交换律与结合律对应一个运算；而分配律对应两个运算。分配律不够本质。
+交换律反映了对称、无序；结合律反映了组合、顺序。结合律不会缺失信息。</p>
+<p>数学通过集合概括世界，通过映射解构世界，通过逻辑认识世界。许多天马行空的事情其实内在有联系。
+在抽象代数中加法和除法都只是代数运算，没有什么区别。
+加法看成计数的扩展，乘法看成加法的扩展，乘方看成乘法的扩展
+不过需要指出也有研究加法和乘法的关系 整数集对乘法不封闭所以有质数</p>
+<table>
+<thead>
+<tr>
+<th>常见群/环</th>
+<th>定义</th>
+<th>性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整数加群<span class="arithmatex"><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span></td>
+<td></td>
+<td>无限循环群</td>
+</tr>
+<tr>
+<td>非零有理数乘群<span class="arithmatex"><span class="MathJax_Preview">Q^*</span><script type="math/tex">Q^*</script></span></td>
+<td></td>
+<td>无限群</td>
+</tr>
+<tr>
+<td>n阶线性群<span class="arithmatex"><span class="MathJax_Preview">GL_n(F)</span><script type="math/tex">GL_n(F)</script></span></td>
+<td>数域<span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上全体n阶满秩方阵对矩阵的乘法</td>
+<td>n阶循环群</td>
+</tr>
+<tr>
+<td>n次单位根群<span class="arithmatex"><span class="MathJax_Preview">U_n</span><script type="math/tex">U_n</script></span></td>
+<td>全体n次单位根对数的普通乘法</td>
+<td>n阶交换群</td>
+</tr>
+<tr>
+<td>四元数群</td>
+<td>四元数对四元数乘法</td>
+<td>8阶非交换群</td>
+</tr>
+<tr>
+<td>n元对称群<span class="arithmatex"><span class="MathJax_Preview">S_n</span><script type="math/tex">S_n</script></span></td>
+<td>n阶集合的双射变换群</td>
+<td>n阶群</td>
+</tr>
+<tr>
+<td>n元交错群<span class="arithmatex"><span class="MathJax_Preview">A_n</span><script type="math/tex">A_n</script></span></td>
+<td><span class="arithmatex"><span class="MathJax_Preview">S_n</span><script type="math/tex">S_n</script></span> 中全体偶置换作成的子群</td>
+<td>n阶群</td>
+</tr>
+<tr>
+<td>克莱因四元群<span class="arithmatex"><span class="MathJax_Preview">K_4</span><script type="math/tex">K_4</script></span></td>
+<td><span class="arithmatex"><span class="MathJax_Preview">\{(1),(12)(34),(13)(24),(14)(23)\}</span><script type="math/tex">\{(1),(12)(34),(13)(24),(14)(23)\}</script></span></td>
+<td><span class="arithmatex"><span class="MathJax_Preview">A_4</span><script type="math/tex">A_4</script></span> 的一个交换子群</td>
+</tr>
+<tr>
+<td>四元数除环</td>
+<td><span class="arithmatex"><span class="MathJax_Preview">\{a\cdot 1+b\cdot\boldsymbol{i}+c\cdot\boldsymbol{j}+d\cdot\boldsymbol{k}\mid a,b,c,d\in R\}</span><script type="math/tex">\{a\cdot 1+b\cdot\boldsymbol{i}+c\cdot\boldsymbol{j}+d\cdot\boldsymbol{k}\mid a,b,c,d\in R\}</script></span></td>
+<td>无限非可换除环</td>
+</tr>
+<tr>
+<td>高斯整环<span class="arithmatex"><span class="MathJax_Preview">Z[i]</span><script type="math/tex">Z[i]</script></span></td>
+<td><span class="arithmatex"><span class="MathJax_Preview">\{a+bi \mid a,b\in Z\}</span><script type="math/tex">\{a+bi \mid a,b\in Z\}</script></span></td>
+<td>整环</td>
+</tr>
+<tr>
+<td>模n循环类环<span class="arithmatex"><span class="MathJax_Preview">Z_n</span><script type="math/tex">Z_n</script></span></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>多项式环<span class="arithmatex"><span class="MathJax_Preview">R[x]</span><script type="math/tex">R[x]</script></span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">基础知识</h2>
+<h3 id="_3">集合</h3>
+<p><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的所有子集作成的集合称为 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的幂集记作 <span class="arithmatex"><span class="MathJax_Preview">P(A)</span><script type="math/tex">P(A)</script></span>，<span class="arithmatex"><span class="MathJax_Preview">|P(A)|=2^{|A|}</span><script type="math/tex">|P(A)|=2^{|A|}</script></span></p>
+<h3 id="_4">映射</h3>
+<p><strong>定义 <code>映射</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">A,B</span><script type="math/tex">A,B</script></span> 是两个集合。如果到有一个对应法则 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> ，使得 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 中每一个元素 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 中都有唯一确定的元素 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 与它对应，则称 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的一个<strong>映射</strong>，表示为 <span class="arithmatex"><span class="MathJax_Preview">f:A\to B,a\mapsto b</span><script type="math/tex">f:A\to B,a\mapsto b</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">b=f(a)</span><script type="math/tex">b=f(a)</script></span>
+此时 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 称为 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 下的<strong>像</strong>， <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 称为 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 下的<strong>原像</strong>；<span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 称为映射 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 的<strong>定义域</strong>，<span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 称为<strong>陪域</strong>，<span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的子集 <span class="arithmatex"><span class="MathJax_Preview">f(A):=\{f(a)|a\in A\}</span><script type="math/tex">f(A):=\{f(a)|a\in A\}</script></span> 称为 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 的<strong>值域（像集）</strong>，可记为 <span class="arithmatex"><span class="MathJax_Preview">\text{Im}\ f</span><script type="math/tex">\text{Im}\ f</script></span>，显然 <span class="arithmatex"><span class="MathJax_Preview">f(A)\subseteq B</span><script type="math/tex">f(A)\subseteq B</script></span>
+设 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的一个映射，如果在 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 之下 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 中每个元素在 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 中都有逆像，则称 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 是<strong>满射</strong>；如果在 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 之下 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 中不同元素在 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 中的像也不同，则称 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 是<strong>单射</strong>；如果 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 既是满射又是单射，则称 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 是<strong>双射（一一对应）</strong>
+当两个映射定义域、陪域、对应法则都相同时，称这两个<strong>映射相等</strong></p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">A,B</span><script type="math/tex">A,B</script></span> 存在一个双射的充要条件是 <span class="arithmatex"><span class="MathJax_Preview">|A|=|B|</span><script type="math/tex">|A|=|B|</script></span> (无穷集合等势)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 存在逆映射 <span class="arithmatex"><span class="MathJax_Preview">f^{-1}:b\to a</span><script type="math/tex">f^{-1}:b\to a</script></span> 当且仅当 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 是双射</li>
+<li>从 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 有 <span class="arithmatex"><span class="MathJax_Preview">|B|^{|A|}</span><script type="math/tex">|B|^{|A|}</script></span> 个映射；有 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle\frac{|B|!}{(|B|-|A|)!}</span><script type="math/tex">\displaystyle\frac{|B|!}{(|B|-|A|)!}</script></span>（<span class="arithmatex"><span class="MathJax_Preview">|A|\leqslant |B|</span><script type="math/tex">|A|\leqslant |B|</script></span>）个单射</li>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">\varphi:X\to Y</span><script type="math/tex">\varphi:X\to Y</script></span>，<span class="arithmatex"><span class="MathJax_Preview">A,B</span><script type="math/tex">A,B</script></span> 分别为 <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> 的非空子集，则（这里 <span class="arithmatex"><span class="MathJax_Preview">\varphi^{-1}</span><script type="math/tex">\varphi^{-1}</script></span> 不是逆映射，而是指原像集）
+  1）<span class="arithmatex"><span class="MathJax_Preview">A\subseteq \varphi^{-1}(\varphi(A))</span><script type="math/tex">A\subseteq \varphi^{-1}(\varphi(A))</script></span>，<span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 为单射时等号成立
+  2）<span class="arithmatex"><span class="MathJax_Preview">\varphi(\varphi^{-1}(B))\subseteq B</span><script type="math/tex">\varphi(\varphi^{-1}(B))\subseteq B</script></span>，<span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 为满射时等号成立</li>
+</ul>
+<p>定义 <code>映射的合成</code> 设 <span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的一个映射， <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 的一个映射，显然 <span class="arithmatex"><span class="MathJax_Preview">a\to\sigma(\tau(a))</span><script type="math/tex">a\to\sigma(\tau(a))</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 的一个映射，把这个映射记为 <span class="arithmatex"><span class="MathJax_Preview">\sigma\tau</span><script type="math/tex">\sigma\tau</script></span> 并称映射的合成或映射的乘法</p>
+<p><strong>定义 <code>变换</code></strong> 集合 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 到自身的映射叫做 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的一个<strong>变换</strong>
+<span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 中每个元素与自身对应的变换称为的<strong>恒等变换</strong>，记作 <span class="arithmatex"><span class="MathJax_Preview">1_A:a\mapsto a</span><script type="math/tex">1_A:a\mapsto a</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的双射变换又称<strong>n元置换</strong>，共有 <span class="arithmatex"><span class="MathJax_Preview">|A|!</span><script type="math/tex">|A|!</script></span> 个，并且通常表示成：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\varphi=\begin{pmatrix}
+  1&amp;2&amp;\cdots&amp;n\\\varphi(1)&amp;\varphi(2)&amp;\cdots&amp;\varphi(n)
+\end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\varphi=\begin{pmatrix}
+  1&2&\cdots&n\\\varphi(1)&\varphi(2)&\cdots&\varphi(n)
+\end{pmatrix}
+</script>
+</div>
+<p><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 中全体变换作成的集合记作 <span class="arithmatex"><span class="MathJax_Preview">T(A)</span><script type="math/tex">T(A)</script></span>；全体双射变换作成的集合记作 <span class="arithmatex"><span class="MathJax_Preview">S(A)</span><script type="math/tex">S(A)</script></span></p>
+<h4 id="_5">代数运算</h4>
+<p><span class="arithmatex"><span class="MathJax_Preview">A\times A\to A</span><script type="math/tex">A\times A\to A</script></span></p>
+<p>笛卡尔积</p>
+<p>运算律</p>
+<h4 id="_6">同态与同构</h4>
+<h3 id="_7">等价关系与集合的分类</h3>
+<h2 id="_8">群</h2>
+<p><strong>定义 <code>群</code></strong> 如果非空集合<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>有代数运算<span class="arithmatex"><span class="MathJax_Preview">\circ</span><script type="math/tex">\circ</script></span>满足以下条件：
+    1）结合律成立<span class="arithmatex"><span class="MathJax_Preview">(a\circ b)\circ c=a\circ (b\circ c)</span><script type="math/tex">(a\circ b)\circ c=a\circ (b\circ c)</script></span>
+    2）<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>中有元素<span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>，叫做<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的左单位元，它对<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>中每个元素<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>都有<span class="arithmatex"><span class="MathJax_Preview">e\circ a=a</span><script type="math/tex">e\circ a=a</script></span>
+    3）对<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>中每个元素<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，对于同一个左单位元在<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>中都有元素<span class="arithmatex"><span class="MathJax_Preview">a^{-1}</span><script type="math/tex">a^{-1}</script></span>，叫做<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>的左逆元，有<span class="arithmatex"><span class="MathJax_Preview">a^{-1}\circ a=e</span><script type="math/tex">a^{-1}\circ a=e</script></span>
+则称<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>对这个代数运算作成一个<strong>群</strong>，记为 <span class="arithmatex"><span class="MathJax_Preview">(G,\circ)</span><script type="math/tex">(G,\circ)</script></span>
+<em>不至误解的情况下，群 <span class="arithmatex"><span class="MathJax_Preview">(G,\circ)</span><script type="math/tex">(G,\circ)</script></span> 简记为群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>，运算 <span class="arithmatex"><span class="MathJax_Preview">a\circ b</span><script type="math/tex">a\circ b</script></span> 简写为 <span class="arithmatex"><span class="MathJax_Preview">ab</span><script type="math/tex">ab</script></span></em></p>
+<p>如果<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的代数运算满足交换律<span class="arithmatex"><span class="MathJax_Preview">a\circ b=b\circ a</span><script type="math/tex">a\circ b=b\circ a</script></span>，则称为<strong>交换群</strong>（可换群/阿贝尔群）</p>
+<ul>
+<li>群的左单位元也是右单位元，并且是唯一的<blockquote>
+<p>因为每个元素都有左逆元，设<span class="arithmatex"><span class="MathJax_Preview">a^{-1}a=a'a^{-1}=e</span><script type="math/tex">a^{-1}a=a'a^{-1}=e</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">ae=e(ae)=a'a^{-1}(ae)=a'(a^{-1}a)e=a'e=a'(a^{-1}a)=(a'a^{-1})a=ea=a</span><script type="math/tex">ae=e(ae)=a'a^{-1}(ae)=a'(a^{-1}a)e=a'e=a'(a^{-1}a)=(a'a^{-1})a=ea=a</script></span>
+设左单位元分别为<span class="arithmatex"><span class="MathJax_Preview">e,e'</span><script type="math/tex">e,e'</script></span>，有<span class="arithmatex"><span class="MathJax_Preview">ee'=e=e'</span><script type="math/tex">ee'=e=e'</script></span>
+</p>
+</blockquote>
+</li>
+<li>群的左逆元也是右逆元，并且是唯一的</li>
+<li>群中消去律成立</li>
+</ul>
+<p><strong>定义 <code>半群</code></strong> 设<span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>是一个非空集合。如果它有一个代数运算满足结合律，则称<span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>是一个<strong>半群</strong>。有单位元的半群称为<strong>幺半群</strong>。</p>
+<ul>
+<li>半群成群的充要条件是，半群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>中任意元素<span class="arithmatex"><span class="MathJax_Preview">a,b</span><script type="math/tex">a,b</script></span>，方程<span class="arithmatex"><span class="MathJax_Preview">ax=b,ya=b</span><script type="math/tex">ax=b,ya=b</script></span>在<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>中都有解。</li>
+<li>有限半群成群的充要条件是左右消去律成立</li>
+</ul>
+<p><strong>定义 <code>阶</code></strong> 群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>中元素的个数称为<strong>群的阶</strong>，记为<span class="arithmatex"><span class="MathJax_Preview">|G|</span><script type="math/tex">|G|</script></span>（元素个数无限称阶无限）
+设<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>为群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的一个元素，使<span class="arithmatex"><span class="MathJax_Preview">a^n=e</span><script type="math/tex">a^n=e</script></span>的最小整数<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>称为群中<strong>元素的阶</strong>，记为<span class="arithmatex"><span class="MathJax_Preview">|a|</span><script type="math/tex">|a|</script></span>（不存在这样的n称阶无限）
+<em>若群中每个元素的阶都有限称为 <code>周期群</code>；若群除单位元外其余元素的阶均无限称为 <code>无扭群</code>；既不是周期群又不是无扭群的群称为 <code>混合群</code></em></p>
+<ul>
+<li>有限群中每个元素的阶均有限且整除群的阶</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">a^m=e\Longleftrightarrow n|m</span><script type="math/tex">a^m=e\Longleftrightarrow n|m</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\displaystyle|a^k|=\frac{n}{(k,n)}</span><script type="math/tex">\displaystyle|a^k|=\frac{n}{(k,n)}</script></span></li>
+<li>若<span class="arithmatex"><span class="MathJax_Preview">ab=ba,(|a|,|b|)=1</span><script type="math/tex">ab=ba,(|a|,|b|)=1</script></span>则<span class="arithmatex"><span class="MathJax_Preview">|ab|=|a||b|</span><script type="math/tex">|ab|=|a||b|</script></span></li>
+<li>交换群每个元素的阶都是所有元素最大阶的因数</li>
+</ul>
+<p><strong>定义 <code>子群</code></strong> 设<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>是一个群，<span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>是<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的一个非空子集。如果<span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>对<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的乘法也作成群，则称<span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>为群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的一个子群，记为<span class="arithmatex"><span class="MathJax_Preview">H\leqslant G</span><script type="math/tex">H\leqslant G</script></span>(真子群为<span class="arithmatex"><span class="MathJax_Preview">H&lt;G</span><script type="math/tex">H<G</script></span>)
+设 <span class="arithmatex"><span class="MathJax_Preview">H,K</span><script type="math/tex">H,K</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的两个子群，如果存在 <span class="arithmatex"><span class="MathJax_Preview">g\in G</span><script type="math/tex">g\in G</script></span> 使得 <span class="arithmatex"><span class="MathJax_Preview">g^{-1}Hg=K</span><script type="math/tex">g^{-1}Hg=K</script></span>，则称 <span class="arithmatex"><span class="MathJax_Preview">H,K</span><script type="math/tex">H,K</script></span> 共轭</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">H\leqslant G</span><script type="math/tex">H\leqslant G</script></span>，则子群 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> 的单位元就是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的单位元，<span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> 中元素 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> 中的逆元就是 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 中的逆元</li>
+<li>群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个非空子集 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> 成群的充要条件是 <span class="arithmatex"><span class="MathJax_Preview">a,b\in H\Rightarrow ab\in H,a\in H\Rightarrow a^{-1}\in H</span><script type="math/tex">a,b\in H\Rightarrow ab\in H,a\in H\Rightarrow a^{-1}\in H</script></span>
+  群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个非空子集 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> 成群的充要条件是 <span class="arithmatex"><span class="MathJax_Preview">a,b\in H\Rightarrow ab^{-1}\in H</span><script type="math/tex">a,b\in H\Rightarrow ab^{-1}\in H</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">H,K\leqslant G\Rightarrow H\cap K\leqslant H</span><script type="math/tex">H,K\leqslant G\Rightarrow H\cap K\leqslant H</script></span></li>
+</ul>
+<p><strong>定义 <code>中心</code></strong> 群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 中元素 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 如果同 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 中每个元素都可换，则称 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个<strong>中心元</strong>。显然单位元 <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的平凡中心元，没有其他中心元的群称为无中心群
+群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的全体中心元作成的集合 <span class="arithmatex"><span class="MathJax_Preview">C(G)</span><script type="math/tex">C(G)</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个交换子群，称为群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的<strong>中心</strong>。</p>
+<ul>
+<li>群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 是交换群当且仅当 <span class="arithmatex"><span class="MathJax_Preview">C(G)=G</span><script type="math/tex">C(G)=G</script></span></li>
+</ul>
+<p><strong>定义 <code>乘积、逆</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">A,B</span><script type="math/tex">A,B</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的非空子集，规定</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+AB=\{ab|a\in A,b\in B\},A^{-1}=\{a^{-1}|a\in A\}
+</div>
+<script type="math/tex; mode=display">
+AB=\{ab|a\in A,b\in B\},A^{-1}=\{a^{-1}|a\in A\}
+</script>
+</div>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">(AB)C=A(BC),A(B\cup C)=AB\cup AC,(AB)^{-1}=B^{-1}A^{-1},(A^{-1})^{-1}=A</span><script type="math/tex">(AB)C=A(BC),A(B\cup C)=AB\cup AC,(AB)^{-1}=B^{-1}A^{-1},(A^{-1})^{-1}=A</script></span></li>
+<li>群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个非空子集 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> 成群的充要条件是 <span class="arithmatex"><span class="MathJax_Preview">HH=H,H^{-1}=H</span><script type="math/tex">HH=H,H^{-1}=H</script></span>
+  群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个非空子集 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> 成群的充要条件是 <span class="arithmatex"><span class="MathJax_Preview">HH^{-1}=H</span><script type="math/tex">HH^{-1}=H</script></span>，特别地如果是有限子集则只需 <span class="arithmatex"><span class="MathJax_Preview">HH=H</span><script type="math/tex">HH=H</script></span></li>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">H,K</span><script type="math/tex">H,K</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的两个子群，则 <span class="arithmatex"><span class="MathJax_Preview">HK\leqslant G\Longleftrightarrow HK=KH</span><script type="math/tex">HK\leqslant G\Longleftrightarrow HK=KH</script></span></li>
+</ul>
+<h3 id="_9">群的同态同构</h3>
+<p><strong>定义 <code>同态同构</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">(G,\cdot),(G',\circ)</span><script type="math/tex">(G,\cdot),(G',\circ)</script></span> 是两个群。映射 <span class="arithmatex"><span class="MathJax_Preview">f:G\to G'</span><script type="math/tex">f:G\to G'</script></span> 叫做群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 到群 <span class="arithmatex"><span class="MathJax_Preview">G'</span><script type="math/tex">G'</script></span> 的<strong>同态</strong>，如果对 <span class="arithmatex"><span class="MathJax_Preview">a,b\in G</span><script type="math/tex">a,b\in G</script></span>，</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f(a\cdot b)=f(a)\circ f(b)
+</div>
+<script type="math/tex; mode=display">
+f(a\cdot b)=f(a)\circ f(b)
+</script>
+</div>
+<p>此外，若 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 又为单射或满射，则称其为<strong>单同态</strong>或<strong>满同态</strong>。若 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 是一一映射，则称其为<strong>同构</strong>，此时称两群是同构的 <span class="arithmatex"><span class="MathJax_Preview">G\cong G'</span><script type="math/tex">G\cong G'</script></span>
+群到自身的同态映射和同构映射分别称为群的<strong>自同态</strong>和<strong>自同构</strong>
+<em>同构的群具有完全相同的群结构，在群论中认为同构的群本质是同一个群</em></p>
+<ul>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 是一个群，<span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 是一个有代数运算的集合，如果 <span class="arithmatex"><span class="MathJax_Preview">G\sim\overline{G}</span><script type="math/tex">G\sim\overline{G}</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 也是一个群</li>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 到群 <span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 的一个同态映射，则
+  当时 <span class="arithmatex"><span class="MathJax_Preview">H\leqslant G</span><script type="math/tex">H\leqslant G</script></span>，有 <span class="arithmatex"><span class="MathJax_Preview">\varphi(H)\leqslant\overline{G}</span><script type="math/tex">\varphi(H)\leqslant\overline{G}</script></span>，且 <span class="arithmatex"><span class="MathJax_Preview">H\sim\varphi(H)</span><script type="math/tex">H\sim\varphi(H)</script></span>
+  当时 <span class="arithmatex"><span class="MathJax_Preview">\overline{H}\leqslant\overline{G}</span><script type="math/tex">\overline{H}\leqslant\overline{G}</script></span>，有 <span class="arithmatex"><span class="MathJax_Preview">\varphi^{-1}(\overline{H})\leqslant G</span><script type="math/tex">\varphi^{-1}(\overline{H})\leqslant G</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 是单射的充要条件是群 <span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 的单位元 <span class="arithmatex"><span class="MathJax_Preview">\overline{e}</span><script type="math/tex">\overline{e}</script></span> 的逆像只有 <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span></li>
+<li>4阶非循环群 <span class="arithmatex"><span class="MathJax_Preview">G\cong K_4</span><script type="math/tex">G\cong K_4</script></span>；6阶非循环群 <span class="arithmatex"><span class="MathJax_Preview">G\cong S_3</span><script type="math/tex">G\cong S_3</script></span></li>
+</ul>
+<hr />
+<p><strong>定义 <code>自同构群</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 是有一个代数运算的代数系统，则 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 的全体自同构关于变换的乘法作成一个群，称为 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 的自同构群。特别地<strong>群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的自同构群</strong>记为 <span class="arithmatex"><span class="MathJax_Preview">\text{Aut}\ G</span><script type="math/tex">\text{Aut}\ G</script></span></p>
+<p><strong>定义 <code>内自同构群</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 是一个群，<span class="arithmatex"><span class="MathJax_Preview">a\in G</span><script type="math/tex">a\in G</script></span> 则
+1）自同构 <span class="arithmatex"><span class="MathJax_Preview">\tau_a:x\longrightarrow axa^{-1}\quad(\forall x\in G)</span><script type="math/tex">\tau_a:x\longrightarrow axa^{-1}\quad(\forall x\in G)</script></span> 称为 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个<strong>内自同构</strong>
+2）<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的全体内自同构作成一个群，称为 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的<strong>内自同构群</strong>记为 <span class="arithmatex"><span class="MathJax_Preview">\text{Inn}\ G</span><script type="math/tex">\text{Inn}\ G</script></span>
+3）<span class="arithmatex"><span class="MathJax_Preview">\text{Inn}\ G\unlhd\text{Aut}\ G</span><script type="math/tex">\text{Inn}\ G\unlhd\text{Aut}\ G</script></span></p>
+<p>定义 <code>特征子群、全特征子群</code> 对群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的所有自同构都不变的子群 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 称为 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的一个特征子群；对群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的所有自同态都不变的子群 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 称为 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的一个全特征子群</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">全特征子群\subset 特征子群\subset 正规子群</span><script type="math/tex">全特征子群\subset 特征子群\subset 正规子群</script></span></li>
+<li>无限循环群的自同构群是一个二阶循环群；n阶循环群的自同构群是一个 <span class="arithmatex"><span class="MathJax_Preview">\varphi(n)</span><script type="math/tex">\varphi(n)</script></span> 阶群</li>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的中心，则 <span class="arithmatex"><span class="MathJax_Preview">\text{Inn}\ G\cong G/C</span><script type="math/tex">\text{Inn}\ G\cong G/C</script></span></li>
+</ul>
+<h3 id="_10">重要的群</h3>
+<h4 id="_11">循环群</h4>
+<ul>
+<li>无限循环群同构于整数加法群 <span class="arithmatex"><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span>，n阶有限循环群同构于整数模n加法群 <span class="arithmatex"><span class="MathJax_Preview">Z_n</span><script type="math/tex">Z_n</script></span>(n次单位根群 <span class="arithmatex"><span class="MathJax_Preview">U_n</span><script type="math/tex">U_n</script></span>)</li>
+<li>n阶群是循环群等价于群有n阶元素</li>
+<li>无限循环群的生成元只有 <span class="arithmatex"><span class="MathJax_Preview">a,a^{-1}</span><script type="math/tex">a,a^{-1}</script></span>
+  n阶循环群的生成元是 <span class="arithmatex"><span class="MathJax_Preview">a^k(1\leqslant k\leqslant n,(k,n)=1)</span><script type="math/tex">a^k(1\leqslant k\leqslant n,(k,n)=1)</script></span>，共 <span class="arithmatex"><span class="MathJax_Preview">\varphi(n)</span><script type="math/tex">\varphi(n)</script></span> 个</li>
+<li>循环群的子群均是循环群</li>
+<li>素数阶群均是循环群，并且同构于整数模p加群</li>
+</ul>
+<h4 id="_12">变换群</h4>
+<ul>
+<li>非空集合 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 的全体双射变换作成的集合 <span class="arithmatex"><span class="MathJax_Preview">S(M)</span><script type="math/tex">S(M)</script></span> 关于变换的乘法作成一个群</li>
+<li>含有集合的单射或满射变换的变换群一定是双射变换群
+  不是双射变换群的变换群一定是非双射变换群</li>
+<li><strong>Cayley定理</strong>：任何群都同一个双射变换群同构
+  任何n阶有限群都与一个n元置换群同构</li>
+</ul>
+<h4 id="_13">置换群</h4>
+<ul>
+<li>不相连轮换相乘时可以交换</li>
+<li>每个置换都可以表示成不相连轮换之积，每个论换都可以表示为对换之积</li>
+<li>将置换表示成对换之积时，对换个数的奇偶性不变。若可表示为奇数个对换之积称为奇置换，偶数个称为偶置换，特别地恒等置换是偶置换</li>
+<li>k-轮换的阶为k，不相连轮换乘积的阶为各因子阶的最小公倍数</li>
+<li>设有n元置换 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle\tau=\begin{pmatrix}1&amp;2&amp;\cdots&amp;n\\i_1&amp;i_2&amp;\cdots&amp;i_n\end{pmatrix}</span><script type="math/tex">\displaystyle\tau=\begin{pmatrix}1&2&\cdots&n\\i_1&i_2&\cdots&i_n\end{pmatrix}</script></span>，则对任意n元置换 <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>，有 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle\sigma\tau\sigma^{-1}=\begin{pmatrix}\sigma(1)&amp;\sigma(2)&amp;\cdots&amp;\sigma(n)\\\sigma(i_1)&amp;\sigma(i_2)&amp;\cdots&amp;\sigma(i_n)\end{pmatrix}</span><script type="math/tex">\displaystyle\sigma\tau\sigma^{-1}=\begin{pmatrix}\sigma(1)&\sigma(2)&\cdots&\sigma(n)\\\sigma(i_1)&\sigma(i_2)&\cdots&\sigma(i_n)\end{pmatrix}</script></span></li>
+</ul>
+<h3 id="_14">陪集与拉格朗日定理</h3>
+<p><strong>定义 <code>陪集</code></strong> 设<span class="arithmatex"><span class="MathJax_Preview">H\leqslant G,a\in G</span><script type="math/tex">H\leqslant G,a\in G</script></span>，称群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的子集<span class="arithmatex"><span class="MathJax_Preview">aH=\{ax|x\in H\}</span><script type="math/tex">aH=\{ax|x\in H\}</script></span>为群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>关于子群<span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>的一个<strong>左陪集</strong>；称群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的子集<span class="arithmatex"><span class="MathJax_Preview">Ha=\{xa|x\in H\}</span><script type="math/tex">Ha=\{xa|x\in H\}</script></span>为群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>关于子群<span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>的一个<strong>右陪集</strong>
+群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>中关于子群<span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>的互异的左（右）陪集的个数称为<span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>在<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>里的<strong>指数</strong>，记为<span class="arithmatex"><span class="MathJax_Preview">(G:H)</span><script type="math/tex">(G:H)</script></span></p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">a\in aH</span><script type="math/tex">a\in aH</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">a\in H\Longleftrightarrow aH=H</span><script type="math/tex">a\in H\Longleftrightarrow aH=H</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">b\in aH\Longleftrightarrow aH=bH</span><script type="math/tex">b\in aH\Longleftrightarrow aH=bH</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">aH=bH\Longleftrightarrow a^{-1}b\in H</span><script type="math/tex">aH=bH\Longleftrightarrow a^{-1}b\in H</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">aH\cap bH\neq\varnothing\Longrightarrow aH=bH</span><script type="math/tex">aH\cap bH\neq\varnothing\Longrightarrow aH=bH</script></span></li>
+</ul>
+<p>由上列性质可知群G中每个元素必属于一个左陪集（性质1），而且不能属于不同左陪集（性质5）。因此有：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+G=aH\cup bH\cup cH\cup\cdots
+</div>
+<script type="math/tex; mode=display">
+G=aH\cup bH\cup cH\cup\cdots
+</script>
+</div>
+<p>称为<strong>群G关于子群H的左陪集分解</strong>，称<span class="arithmatex"><span class="MathJax_Preview">\{a,b,c,\cdots\}</span><script type="math/tex">\{a,b,c,\cdots\}</script></span>为左陪集代表系（以左陪集为例，右陪集也有类似结论）</p>
+<ul>
+<li>设<span class="arithmatex"><span class="MathJax_Preview">H\leqslant G</span><script type="math/tex">H\leqslant G</script></span>，令<span class="arithmatex"><span class="MathJax_Preview">L=\{aH|a\in G\},R=\{Ha|a\in G\}</span><script type="math/tex">L=\{aH|a\in G\},R=\{Ha|a\in G\}</script></span>
+  则在<span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>与<span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>之间存在一个双射，从而左右陪集个数无限或有限且相等</li>
+<li><strong>拉格朗日定理</strong>:若<span class="arithmatex"><span class="MathJax_Preview">|G|&lt;\infty,H\leqslant G</span><script type="math/tex">|G|<\infty,H\leqslant G</script></span>，则<span class="arithmatex"><span class="MathJax_Preview">\displaystyle(G:H)=\frac{|G|}{|H|}</span><script type="math/tex">\displaystyle(G:H)=\frac{|G|}{|H|}</script></span></li>
+<li>设<span class="arithmatex"><span class="MathJax_Preview">H,K</span><script type="math/tex">H,K</script></span>是群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的两个有限子群，则<span class="arithmatex"><span class="MathJax_Preview">\displaystyle |HK|=\frac{|H|\cdot|K|}{|H\cap K|}</span><script type="math/tex">\displaystyle |HK|=\frac{|H|\cdot|K|}{|H\cap K|}</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">(G:H\cap K)\leqslant (G:H)(G:K)</span><script type="math/tex">(G:H\cap K)\leqslant (G:H)(G:K)</script></span>，当 <span class="arithmatex"><span class="MathJax_Preview">(G:H),(G:K)</span><script type="math/tex">(G:H),(G:K)</script></span> 互素时取等，且 <span class="arithmatex"><span class="MathJax_Preview">G=HK</span><script type="math/tex">G=HK</script></span></li>
+</ul>
+<p>单位元外每个元素的阶均为2的群是阿贝尔群
+非阿贝尔群的最小阶数是6
+p^2均是阿贝尔群</p>
+<h3 id="_15">群作用于集合</h3>
+<p>由变换群中提及的Cayley定理</p>
+<p><strong>定义 <code>群作用于集合</code></strong> 设<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>是一个群，<span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>是一个集合。如果有一个</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+G\times M=\{(a,x)|a\in G,x\in M\}
+</div>
+<script type="math/tex; mode=display">
+G\times M=\{(a,x)|a\in G,x\in M\}
+</script>
+</div>
+<p>到 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 的映射 <span class="arithmatex"><span class="MathJax_Preview">(a,x)\rightarrow a\circ x\in M</span><script type="math/tex">(a,x)\rightarrow a\circ x\in M</script></span> 满足:</p>
+<p>1）<span class="arithmatex"><span class="MathJax_Preview">(ab)\circ x=a\circ(b\circ x)</span><script type="math/tex">(ab)\circ x=a\circ(b\circ x)</script></span>（<span class="arithmatex"><span class="MathJax_Preview">\forall a,b\in G,x\in M</span><script type="math/tex">\forall a,b\in G,x\in M</script></span>）</p>
+<p>2）<span class="arithmatex"><span class="MathJax_Preview">e\circ x=x</span><script type="math/tex">e\circ x=x</script></span>（<span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>是<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的单位元）</p>
+<p>则称群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>作用于集合<span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>，并称<span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>为作用集合，运算<span class="arithmatex"><span class="MathJax_Preview">\circ</span><script type="math/tex">\circ</script></span>为作用乘法
+<em>可知寻求群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>在集合<span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>上的一个作用与寻求群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>到对称群<span class="arithmatex"><span class="MathJax_Preview">S(M)</span><script type="math/tex">S(M)</script></span>的一个同态映射是等价的</em></p>
+<p><strong>定义 <code>轨道</code></strong> 设群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>作用于集合<span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>，<span class="arithmatex"><span class="MathJax_Preview">x\in M</span><script type="math/tex">x\in M</script></span>。则称<span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>的子集</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+M_x=\{a\circ x|a\in G\}
+</div>
+<script type="math/tex; mode=display">
+M_x=\{a\circ x|a\in G\}
+</script>
+</div>
+<p>为<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>在群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>作用下的轨道
+可知集合每个元素必属于一个轨道，而且不能属于不同轨道。因此有：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+M=M_x\bigcup M_y\bigcup\cdots
+</div>
+<script type="math/tex; mode=display">
+M=M_x\bigcup M_y\bigcup\cdots
+</script>
+</div>
+<p>称为集合<span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>按轨道的一个分类，称<span class="arithmatex"><span class="MathJax_Preview">\{x,y,\cdots\}</span><script type="math/tex">\{x,y,\cdots\}</script></span>为轨道的代表元素系</p>
+<ul>
+<li>设群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>作用于集合<span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>，<span class="arithmatex"><span class="MathJax_Preview">x\in M</span><script type="math/tex">x\in M</script></span>。则<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的子集<span class="arithmatex"><span class="MathJax_Preview">G_x=\{a|a\in G,a\circ x=x\}</span><script type="math/tex">G_x=\{a|a\in G,a\circ x=x\}</script></span>是群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的一个子群
+  称其为<span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>中元素<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>的稳定子群</li>
+<li>设群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>作用于集合<span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>，<span class="arithmatex"><span class="MathJax_Preview">x\in M</span><script type="math/tex">x\in M</script></span>。则<span class="arithmatex"><span class="MathJax_Preview">|M_x|=(G:G_x)</span><script type="math/tex">|M_x|=(G:G_x)</script></span>，即
+  轨道<span class="arithmatex"><span class="MathJax_Preview">M_x</span><script type="math/tex">M_x</script></span>与全体左陪集<span class="arithmatex"><span class="MathJax_Preview">\{aG_x|a\in G\}</span><script type="math/tex">\{aG_x|a\in G\}</script></span>之间可建立双射</li>
+</ul>
+<h3 id="_16">正规子群和商群</h3>
+<p><strong>定义 <code>正规子群</code></strong> 设<span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>是群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的一个子群。如果对于<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>中每一个元素<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>都有<span class="arithmatex"><span class="MathJax_Preview">aN=Na(aNa^{-1}=N)</span><script type="math/tex">aN=Na(aNa^{-1}=N)</script></span>，则称<span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>是群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的一个<strong>正规子群</strong>，记为<span class="arithmatex"><span class="MathJax_Preview">N\unlhd G</span><script type="math/tex">N\unlhd G</script></span>(<span class="arithmatex"><span class="MathJax_Preview">N\neq G</span><script type="math/tex">N\neq G</script></span>则记为<span class="arithmatex"><span class="MathJax_Preview">N\lhd G</span><script type="math/tex">N\lhd G</script></span>)
+<em>由定义可知正规子群的左陪集与右陪集等价;交换群的子群都是正规子群;群<span class="arithmatex"><span class="MathJax_Preview">\{e\}</span><script type="math/tex">\{e\}</script></span>与群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>是群<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的平凡正规子群</em></p>
+<ul>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的子群，则 <span class="arithmatex"><span class="MathJax_Preview">N\unlhd G\Leftrightarrow aNa^{-1}\subseteq N\ (\forall a\in G)</span><script type="math/tex">N\unlhd G\Leftrightarrow aNa^{-1}\subseteq N\ (\forall a\in G)</script></span></li>
+<li>正规子群的正规子群不一定是原群的正规子群</li>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 到群 <span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 的一个同态满射，则：
+  <span class="arithmatex"><span class="MathJax_Preview">N\unlhd G\Rightarrow \varphi(N)\unlhd \overline{G}</span><script type="math/tex">N\unlhd G\Rightarrow \varphi(N)\unlhd \overline{G}</script></span>
+  <span class="arithmatex"><span class="MathJax_Preview">\overline{N}\unlhd \overline{G}\Rightarrow \varphi^{-1}(\overline{N})\unlhd G</span><script type="math/tex">\overline{N}\unlhd \overline{G}\Rightarrow \varphi^{-1}(\overline{N})\unlhd G</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">N\unlhd G,H\leqslant G\Rightarrow NH\leqslant G</span><script type="math/tex">N\unlhd G,H\leqslant G\Rightarrow NH\leqslant G</script></span>
+  <span class="arithmatex"><span class="MathJax_Preview">N\unlhd G,H\unlhd G\Rightarrow NH\unlhd G</span><script type="math/tex">N\unlhd G,H\unlhd G\Rightarrow NH\unlhd G</script></span></li>
+<li><strong>群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的正规子群 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 的全体陪集对于陪集的乘法作成一个群，称为 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 关于 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 的商群，记为</strong> <span class="arithmatex"><span class="MathJax_Preview">G/N</span><script type="math/tex">G/N</script></span>，<span class="arithmatex"><span class="MathJax_Preview">|G/N|=(G:N)</span><script type="math/tex">|G/N|=(G:N)</script></span></li>
+<li><strong>Cauchy定理</strong>：<span class="arithmatex"><span class="MathJax_Preview">pn</span><script type="math/tex">pn</script></span> 阶有限群必有 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 阶元素，从而有 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 阶子群
+  推论：互异素数乘积阶交换群必为循环群</li>
+</ul>
+<p>定义 <code>Hamilton群</code> 每个子群都是正规子群的非交换群称为哈密顿群</p>
+<p>定义 <code>单群</code> 阶大于1且只有平凡正规子群的群称为单群</p>
+<p>有限单群分为：素数阶群、大于4阶交错群、有限李型单群、26个零散单群</p>
+<h3 id="_17">群同态基本定理</h3>
+<p>定义 <strong><code>核、像集</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 到群 <span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 的一个同态映射，<span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 的单位元在 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 之下所有逆像作成的集合，称为 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 的<strong>核</strong>记为 <span class="arithmatex"><span class="MathJax_Preview">\text{Ker}\ \varphi</span><script type="math/tex">\text{Ker}\ \varphi</script></span>
+群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 中所有元素在 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 之下的像作成的集合 <span class="arithmatex"><span class="MathJax_Preview">\varphi(G)</span><script type="math/tex">\varphi(G)</script></span>，称为 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 的<strong>像集</strong>记为 <span class="arithmatex"><span class="MathJax_Preview">\text{Im}\ \varphi</span><script type="math/tex">\text{Im}\ \varphi</script></span></p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{Ker}\ \varphi\unlhd G,\text{Im}\ \varphi\leqslant\overline{G}</span><script type="math/tex">\text{Ker}\ \varphi\unlhd G,\text{Im}\ \varphi\leqslant\overline{G}</script></span> 且若 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 为单射，<span class="arithmatex"><span class="MathJax_Preview">\text{Ker}\ \varphi=\{e\}</span><script type="math/tex">\text{Ker}\ \varphi=\{e\}</script></span>；若为 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 满射，<span class="arithmatex"><span class="MathJax_Preview">\text{Im}\ \varphi=\overline{G}</span><script type="math/tex">\text{Im}\ \varphi=\overline{G}</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">N\unlhd G\Rightarrow G\sim G/N</span><script type="math/tex">N\unlhd G\Rightarrow G\sim G/N</script></span>
+  <em>任何群均与其商群同态</em></li>
+<li><strong>群同态基本定理</strong>： 设 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 到群 <span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 的一个同态映射，则 <span class="arithmatex"><span class="MathJax_Preview">G/\text{Ker}\ \varphi\cong\text{Im}\ \varphi</span><script type="math/tex">G/\text{Ker}\ \varphi\cong\text{Im}\ \varphi</script></span>
+  <em>如果两个群同态，则一个群在同构意义下是另一个群的一个商群</em></li>
+<li>有限群 <span class="arithmatex"><span class="MathJax_Preview">G\sim\overline{G}</span><script type="math/tex">G\sim\overline{G}</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">|\overline{G}|\mid|G|</span><script type="math/tex">|\overline{G}|\mid|G|</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">G\sim\overline{G}</span><script type="math/tex">G\sim\overline{G}</script></span>，若 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 是循环群，则 <span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 也是循环群
+  循环群的商群也是循环群</li>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 到群 <span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 的一个同态映射，又 <span class="arithmatex"><span class="MathJax_Preview">H\leqslant G</span><script type="math/tex">H\leqslant G</script></span>。如果 <span class="arithmatex"><span class="MathJax_Preview">H\supseteq\text{Ker}\ \varphi</span><script type="math/tex">H\supseteq\text{Ker}\ \varphi</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">\varphi^{-1}[\varphi(H)]=H</span><script type="math/tex">\varphi^{-1}[\varphi(H)]=H</script></span></li>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 到群 <span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 的一个同态满射，核是 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的含 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 的所有子群与 <span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 的所有子群间可建立一个保持包含关系的双射</li>
+</ul>
+<h3 id="_18">群同构定理</h3>
+<ul>
+<li><strong>第一同构定理</strong> 设 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 到群 <span class="arithmatex"><span class="MathJax_Preview">\overline{G}</span><script type="math/tex">\overline{G}</script></span> 的一个同态满射，又 <span class="arithmatex"><span class="MathJax_Preview">\text{Ker}\ \varphi\supseteq N\unlhd G,\overline{N}=\varphi(N)</span><script type="math/tex">\text{Ker}\ \varphi\supseteq N\unlhd G,\overline{N}=\varphi(N)</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">G/N\cong\overline{G}/\overline{N}</span><script type="math/tex">G/N\cong\overline{G}/\overline{N}</script></span></li>
+<li><strong>第二同构定理</strong> 设 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 是群，又 <span class="arithmatex"><span class="MathJax_Preview">H\leqslant G,N\unlhd G</span><script type="math/tex">H\leqslant G,N\unlhd G</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">H\cap N\unlhd H</span><script type="math/tex">H\cap N\unlhd H</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">HN/N\cong H/(H\cap N)</span><script type="math/tex">HN/N\cong H/(H\cap N)</script></span></li>
+<li><strong>第三同构定理</strong> 设 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 是群，又 <span class="arithmatex"><span class="MathJax_Preview">N\unlhd G,\overline{H}\leqslant G/N</span><script type="math/tex">N\unlhd G,\overline{H}\leqslant G/N</script></span>，则
+  1）存在 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的唯一子群 <span class="arithmatex"><span class="MathJax_Preview">H\supseteq N,\overline{H}=H/N</span><script type="math/tex">H\supseteq N,\overline{H}=H/N</script></span>
+  2）当 <span class="arithmatex"><span class="MathJax_Preview">\overline{H}\unlhd H/N</span><script type="math/tex">\overline{H}\unlhd H/N</script></span> 时，有唯一的 <span class="arithmatex"><span class="MathJax_Preview">H\unlhd G</span><script type="math/tex">H\unlhd G</script></span> 使 <span class="arithmatex"><span class="MathJax_Preview">\overline{H}=H/N,G/N\cong(G/N)/(H/N)</span><script type="math/tex">\overline{H}=H/N,G/N\cong(G/N)/(H/N)</script></span></li>
+</ul>
+<h3 id="sylow">Sylow定理</h3>
+<p>定义 Descartes积</p>
+<p>定义 直积</p>
+<ul>
+<li><strong>第一Sylow定理</strong> 设 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 是有限群，且 <span class="arithmatex"><span class="MathJax_Preview">|G|=p^sm</span><script type="math/tex">|G|=p^sm</script></span>，其中 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是素数，<span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 是正整数，<span class="arithmatex"><span class="MathJax_Preview">p\nmid m</span><script type="math/tex">p\nmid m</script></span>。则对 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的每一个 <span class="arithmatex"><span class="MathJax_Preview">p^i(i=0,1,\cdots,s-1)</span><script type="math/tex">p^i(i=0,1,\cdots,s-1)</script></span> 阶子群 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>，总存在 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">p^{i+1}</span><script type="math/tex">p^{i+1}</script></span> 阶子群 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>，使 <span class="arithmatex"><span class="MathJax_Preview">H\unlhd K</span><script type="math/tex">H\unlhd K</script></span></li>
+<li><strong>第二Sylow定理</strong> 设 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 是有限群，<span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是素数。则 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的所有 <span class="arithmatex"><span class="MathJax_Preview">\text{Sylow}\ p</span><script type="math/tex">\text{Sylow}\ p</script></span> 子群恰好是群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个共轭子群类</li>
+<li><strong>第三Sylow定理</strong> 设 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 是有限群，且 <span class="arithmatex"><span class="MathJax_Preview">|G|=p^sm</span><script type="math/tex">|G|=p^sm</script></span>，其中 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是素数，<span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 是正整数，<span class="arithmatex"><span class="MathJax_Preview">p\nmid m</span><script type="math/tex">p\nmid m</script></span>。若 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">\text{Sylow}\ p</span><script type="math/tex">\text{Sylow}\ p</script></span> 子群共有 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个，则 <span class="arithmatex"><span class="MathJax_Preview">k\mid|G|,p\mid(k-1)</span><script type="math/tex">k\mid|G|,p\mid(k-1)</script></span></li>
+</ul>
+<h3 id="_19">有限交换群基本定理</h3>
+<ul>
+<li><strong>有限交换群基本定理</strong> 任何阶大于1的有限交换群 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 都可以唯一地分解为<strong>素幂阶循环群</strong>（从而为不可分解群）的直积：<span class="arithmatex"><span class="MathJax_Preview">G=\langle a_1 \rangle\times\langle a_2\rangle\times\cdots\times\langle a_n \rangle</span><script type="math/tex">G=\langle a_1 \rangle\times\langle a_2\rangle\times\cdots\times\langle a_n \rangle</script></span>
+  其中 <span class="arithmatex"><span class="MathJax_Preview">\langle a_i \rangle</span><script type="math/tex">\langle a_i \rangle</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">p_i^{\alpha_i}</span><script type="math/tex">p_i^{\alpha_i}</script></span> 阶循环群（<span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是素数，<span class="arithmatex"><span class="MathJax_Preview">i=1,2,\cdots,n</span><script type="math/tex">i=1,2,\cdots,n</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">\alpha_i&gt;0</span><script type="math/tex">\alpha_i>0</script></span>）
+  称每个素数幂 <span class="arithmatex"><span class="MathJax_Preview">p_i^{\alpha_i}</span><script type="math/tex">p_i^{\alpha_i}</script></span> 为群的初等因子，称全体 <span class="arithmatex"><span class="MathJax_Preview">\{p_i^{\alpha_i}|i=1,2,\cdots,n\}</span><script type="math/tex">\{p_i^{\alpha_i}|i=1,2,\cdots,n\}</script></span> 为群的<strong>初等因子组</strong></li>
+</ul>
+<h2 id="_20">环</h2>
+<p><strong>定义 <code>环</code></strong> 设非空集合<span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>有两个代数运算，一个叫做加法（+），另一个叫做乘法（<span class="arithmatex"><span class="MathJax_Preview">\cdot</span><script type="math/tex">\cdot</script></span>）。如果
+    1）<span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>对加法作成一个加群
+    2）<span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>对乘法满足结合律
+    3）乘法对加法满足左右分配律
+则称<span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>对这两个代数运算作成一个环，记为 <span class="arithmatex"><span class="MathJax_Preview">(R,+,\cdot)</span><script type="math/tex">(R,+,\cdot)</script></span> 或简记为环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>
+如果乘法满足交换律称为可换环
+环元素个数称为环的阶；环元素对加法的最大阶称为环的特征，记为 <span class="arithmatex"><span class="MathJax_Preview">\text{char}\ R</span><script type="math/tex">\text{char}\ R</script></span>
+如果加群 <span class="arithmatex"><span class="MathJax_Preview">(R,+)</span><script type="math/tex">(R,+)</script></span> 是循环群，环称为循环环</p>
+<ul>
+<li><strong><code>显然环对加法构成交换群，对乘法构成半群</code></strong></li>
+<li>素数阶环/阶为互异素数之积的有限环比为循环环</li>
+</ul>
+<p><strong>定义 <code>子环</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 是环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的一个非空子集。如果 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 对 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的加法和乘法也作一个环，则称 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的一个子环，记为 <span class="arithmatex"><span class="MathJax_Preview">S\leqslant R</span><script type="math/tex">S\leqslant R</script></span></p>
+<ul>
+<li>非空子集 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 作成子环的充要条件是 <span class="arithmatex"><span class="MathJax_Preview">a,b\in S\Rightarrow a-b\in S,ab\in S</span><script type="math/tex">a,b\in S\Rightarrow a-b\in S,ab\in S</script></span></li>
+</ul>
+<p>定义 零因子
+阶数大于1、有单位元且无零因子的交换环称为<strong>整环</strong></p>
+<ul>
+<li>环无左零因子，则无右零因子</li>
+<li>数环、数域上的多项式环都无零因子</li>
+<li>无零因子的环中，关于乘法的消去律成立</li>
+</ul>
+<h3 id="_21">环的同态同构</h3>
+<p><strong>定义 <code>环的同态同构</code></strong> 如果有一个环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 到环 <span class="arithmatex"><span class="MathJax_Preview">\overline{R}</span><script type="math/tex">\overline{R}</script></span> 的映射 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 满足 <span class="arithmatex"><span class="MathJax_Preview">\forall a,b\in R</span><script type="math/tex">\forall a,b\in R</script></span></p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\varphi(a+b)=\varphi(a)+\varphi(b)\\\varphi(ab)=\varphi(a)\varphi(b)
+</div>
+<script type="math/tex; mode=display">
+\varphi(a+b)=\varphi(a)+\varphi(b)\\\varphi(ab)=\varphi(a)\varphi(b)
+</script>
+</div>
+<p>则称 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 为环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 到环 <span class="arithmatex"><span class="MathJax_Preview">\overline{R}</span><script type="math/tex">\overline{R}</script></span> 的一个<strong>同态映射</strong>
+如果 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 是<strong>同态满射</strong>，则称 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 与 <span class="arithmatex"><span class="MathJax_Preview">\overline{R}</span><script type="math/tex">\overline{R}</script></span> <strong>同态</strong>记为 <span class="arithmatex"><span class="MathJax_Preview">R\sim\overline{R}</span><script type="math/tex">R\sim\overline{R}</script></span>
+如果 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 是同态双射（即<strong>同构映射</strong>），则称 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 与 <span class="arithmatex"><span class="MathJax_Preview">\overline{R}</span><script type="math/tex">\overline{R}</script></span> 与<strong>同构</strong>记为 <span class="arithmatex"><span class="MathJax_Preview">R\cong\overline{R}</span><script type="math/tex">R\cong\overline{R}</script></span></p>
+<h3 id="_22">除环和域</h3>
+<p><strong>定义 <code>除环和域</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 是一个环。如果 <span class="arithmatex"><span class="MathJax_Preview">|R|&gt;1</span><script type="math/tex">|R|>1</script></span>，又有 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 单位元且每个非零元都有逆元，则称是一个<strong>除环</strong>(或体)
+可换除环称为<strong>域</strong></p>
+<ul>
+<li><strong>除环和域没有零因子</strong></li>
+<li><strong>Wedderburn定理</strong>：有限除环必为域</li>
+<li>阶大于1的有限环若有非零元不是零因子，则必有单位元，且每个非零又非零因子的元素都是可逆元
+  <strong>阶数大于1的有限环若无零因子，则必为域</strong></li>
+<li>阶数大于1的环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 是除环当且仅当对 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 中任意元素 <span class="arithmatex"><span class="MathJax_Preview">a\ne 0,b</span><script type="math/tex">a\ne 0,b</script></span>，方程 <span class="arithmatex"><span class="MathJax_Preview">ax=b\quad(or\ ya=b)</span><script type="math/tex">ax=b\quad(or\ ya=b)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 中有解</li>
+</ul>
+<p>定义 <code>分式域（商域）</code> 设 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 是一个整环，<span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 是包含 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 为其子环的一个域。则</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+F=\left\{\frac{b}{a}=a^{-1}b|0\ne a,b\in R\right\}
+</div>
+<script type="math/tex; mode=display">
+F=\left\{\frac{b}{a}=a^{-1}b|0\ne a,b\in R\right\}
+</script>
+</div>
+<p>作成 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 的一个包含 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 为其子环的子域（而且是包含 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的最小域），称 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 为整环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的<strong>分式域</strong>或商域</p>
+<ul>
+<li>同构整环的分式域必同构</li>
+</ul>
+<p><strong>定义 <code>单位群（乘群）</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 是一个有单位元的环，则 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的可逆元也称为 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的单位；全体单位（可逆元）作成的群称为 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的<strong>单位群</strong>或乘群记为 <span class="arithmatex"><span class="MathJax_Preview">U(R)</span><script type="math/tex">U(R)</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">R^*</span><script type="math/tex">R^*</script></span></p>
+<h3 id="_23">重要的环</h3>
+<h4 id="n">模n剩余类环</h4>
+<p><strong>定义 <code>模n剩余类环</code></strong> <span class="arithmatex"><span class="MathJax_Preview">Z_n</span><script type="math/tex">Z_n</script></span> 为由n个剩余类 <span class="arithmatex"><span class="MathJax_Preview">\overline{0},\overline{1},\overline{2},\cdots,\overline{n}</span><script type="math/tex">\overline{0},\overline{1},\overline{2},\cdots,\overline{n}</script></span> 作成的集合，规定加法 <span class="arithmatex"><span class="MathJax_Preview">\overline{i}+\overline{j},\overline{i+j}</span><script type="math/tex">\overline{i}+\overline{j},\overline{i+j}</script></span>、乘法 <span class="arithmatex"><span class="MathJax_Preview">\overline{i}\overline{j}=\overline{ij}</span><script type="math/tex">\overline{i}\overline{j}=\overline{ij}</script></span>，容易证明关于加法和乘法作成一个环称为<strong>模n剩余类环</strong></p>
+<ul>
+<li><strong>环 <span class="arithmatex"><span class="MathJax_Preview">Z_n</span><script type="math/tex">Z_n</script></span> 中非零元 <span class="arithmatex"><span class="MathJax_Preview">\overline{m}</span><script type="math/tex">\overline{m}</script></span> 如果与 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 互素，则为可逆元；如果不与 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 互素，则为零因子</strong></li>
+<li>如果 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 是素数，环 <span class="arithmatex"><span class="MathJax_Preview">Z_n</span><script type="math/tex">Z_n</script></span> 是一个域；如果 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 是合数，则环 <span class="arithmatex"><span class="MathJax_Preview">Z_n</span><script type="math/tex">Z_n</script></span> 有零因子，从而不是域</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">Z_m\sim Z_n\longleftrightarrow n\mid m</span><script type="math/tex">Z_m\sim Z_n\longleftrightarrow n\mid m</script></span></li>
+<li>除去零乘环外，同构意义下，循环环有且只有整数环及其子环、剩余类环及其子环</li>
+</ul>
+<h4 id="_24">多项式环</h4>
+<p>定义 <code>多项式</code> 设 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 是一个有单位元的环，设 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 是一个记号称为 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 上的未定元，则形如</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f(x)=a_0x^0+a_1x+\cdots+a_nx^n\quad(a_i\in R)
+</div>
+<script type="math/tex; mode=display">
+f(x)=a_0x^0+a_1x+\cdots+a_nx^n\quad(a_i\in R)
+</script>
+</div>
+<p>的表达式称为环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 上未定元 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的多项式。系数全为零的多项式称为零多项式。</p>
+<p><strong>定义 <code>多项式环</code></strong> <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 上未定元 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的全体多项式关于多项式的加法与乘法作成一个环，称为 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 上未定元 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的<strong>多项式环</strong>记为 <span class="arithmatex"><span class="MathJax_Preview">R[x]</span><script type="math/tex">R[x]</script></span>
+注意到 <span class="arithmatex"><span class="MathJax_Preview">R[x_1],R[x_1][x_2]</span><script type="math/tex">R[x_1],R[x_1][x_2]</script></span> 也是有单位元的环，一般地可以得到 <span class="arithmatex"><span class="MathJax_Preview">R[x_1][x_2]\cdots[x_n]</span><script type="math/tex">R[x_1][x_2]\cdots[x_n]</script></span>，称为上 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 未定元 <span class="arithmatex"><span class="MathJax_Preview">x_1,x_2,\cdots,x_n</span><script type="math/tex">x_1,x_2,\cdots,x_n</script></span> 的<strong>n元多项式环</strong>，简记为 <span class="arithmatex"><span class="MathJax_Preview">R[x_1,x_2,\cdots,x_n]</span><script type="math/tex">R[x_1,x_2,\cdots,x_n]</script></span></p>
+<ul>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 是一个有单位元的环，<span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 是整环 <span class="arithmatex"><span class="MathJax_Preview">\Longleftrightarrow R[x]</span><script type="math/tex">\Longleftrightarrow R[x]</script></span> 是整环</li>
+<li><strong>多项式环的带余除法</strong>：
+  可换环左右商、左右余式分别相等。</li>
+</ul>
+<h3 id="_25">理想</h3>
+<p><strong>定义 <code>理想</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 是环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的一个子加群，即 <span class="arithmatex"><span class="MathJax_Preview">\forall a,b\in N,a-b\in N</span><script type="math/tex">\forall a,b\in N,a-b\in N</script></span>。
+如果有 <span class="arithmatex"><span class="MathJax_Preview">r\in R,a\in N\Longrightarrow ra\in N</span><script type="math/tex">r\in R,a\in N\Longrightarrow ra\in N</script></span>，则称 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 是环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的一个左理想，并称 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 满足左吸收率
+如果有 <span class="arithmatex"><span class="MathJax_Preview">r\in R,a\in N\Longrightarrow ar\in N</span><script type="math/tex">r\in R,a\in N\Longrightarrow ar\in N</script></span>，则称 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 是环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的一个右理想，并称 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 满足右吸收率
+如果 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 既是环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的左理想又是右理想，则称 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 是环 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的一个双边理想，简称<strong>理想</strong>，记作 <span class="arithmatex"><span class="MathJax_Preview">N\unlhd R</span><script type="math/tex">N\unlhd R</script></span>
+<em>显然一个理想一定是一个子环，交换环中都是双边理想</em>
+阶大于1的环一定有两个平凡理想 <span class="arithmatex"><span class="MathJax_Preview">\{0\},R</span><script type="math/tex">\{0\},R</script></span>，只有平凡理想的非零环称为<strong>单环</strong></p>
+<h3 id="_26">商环</h3>
+<h3 id="_27">环同态基本定理</h3>
+<h3 id="_28">环同构定理</h3>
+<h3 id="_29">素理想和极大理想</h3>
+<h3 id="_30">非交换环</h3>
+<h3 id="_31">唯一分解整环</h3>
+<p>推广整数环和多项式环中关于因子分解理论</p>
+<h2 id="_32">域的扩张</h2>
+<p><strong>定义 <code>扩域</code></strong> 若域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 的一个子域，则称 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 为子域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的一个<strong>扩域</strong>，这样一对域记为 <span class="arithmatex"><span class="MathJax_Preview">E/F</span><script type="math/tex">E/F</script></span></p>
+<p>定义 <code>素域</code> 若域 <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 不含真子域，则称 <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 是一个素域</p>
+<ul>
+<li>当 <span class="arithmatex"><span class="MathJax_Preview">\text{char}\ \Delta=\infty</span><script type="math/tex">\text{char}\ \Delta=\infty</script></span> 时， <span class="arithmatex"><span class="MathJax_Preview">\Delta\cong Q</span><script type="math/tex">\Delta\cong Q</script></span> (<span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 是有理数域)
+  当 <span class="arithmatex"><span class="MathJax_Preview">\text{char}\ \Delta=p</span><script type="math/tex">\text{char}\ \Delta=p</script></span> 时， <span class="arithmatex"><span class="MathJax_Preview">\Delta\cong Z_p</span><script type="math/tex">\Delta\cong Z_p</script></span> (<span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是素数)</li>
+<li>每个域都包含且只包含一个素域</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">F(S)</span><script type="math/tex">F(S)</script></span></li>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的一个扩域，<span class="arithmatex"><span class="MathJax_Preview">S_1,S_2</span><script type="math/tex">S_1,S_2</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 的两个子集，则 <span class="arithmatex"><span class="MathJax_Preview">F(S_1)(S_2)=F(S_2)(S_1)=F(S_1\cup S_2)</span><script type="math/tex">F(S_1)(S_2)=F(S_2)(S_1)=F(S_1\cup S_2)</script></span></li>
+</ul>
+<h3 id="_33">单扩域</h3>
+<p><strong>定义 <code>代数元、超越元</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的一个扩域，<span class="arithmatex"><span class="MathJax_Preview">\alpha\in E</span><script type="math/tex">\alpha\in E</script></span> ，如果存在 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的非零多项式 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 使 <span class="arithmatex"><span class="MathJax_Preview">f(\alpha)=0</span><script type="math/tex">f(\alpha)=0</script></span>，则称 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 范围内 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的一个<strong>代数元</strong>，否则称为一个<strong>超越元</strong></p>
+<p><strong>定义 <code>单扩域</code></strong> 扩域 <span class="arithmatex"><span class="MathJax_Preview">F(\alpha)</span><script type="math/tex">F(\alpha)</script></span> 叫做域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的<strong>单扩域</strong>。当 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的代数元时称 <span class="arithmatex"><span class="MathJax_Preview">F(\alpha)</span><script type="math/tex">F(\alpha)</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的<strong>单代数扩域</strong>；当 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的超越元时称 <span class="arithmatex"><span class="MathJax_Preview">F(\alpha)</span><script type="math/tex">F(\alpha)</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的<strong>单超越扩域</strong></p>
+<p><strong>定义 <code>极小多项式</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的一个代数元，则 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上首系数为1且有根 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>、次数最低的多项式是存在的，称为 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的<strong>极小多项式</strong></p>
+<h3 id="_34">代数扩域、有限次扩域</h3>
+<p><strong>定义 <code>代数扩域</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的一个扩域，如果 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 中每个元素都是 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的代数元，则称 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的一个<strong>代数扩域</strong>；否则称为<strong>超越扩域</strong></p>
+<p><strong>定义 <code>有限次扩域</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的一个扩域，则 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 作为 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的向量空间，其维数 <span class="arithmatex"><span class="MathJax_Preview">\text{dim}_F E</span><script type="math/tex">\text{dim}_F E</script></span> 叫做 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的<strong>次数</strong>记为 <span class="arithmatex"><span class="MathJax_Preview">(E:F)</span><script type="math/tex">(E:F)</script></span>
+次数有限时，称 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的<strong>有限次扩域</strong>；否则称为<strong>无限次扩域</strong></p>
+<ul>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 的一个扩域(<span class="arithmatex"><span class="MathJax_Preview">E/K</span><script type="math/tex">E/K</script></span>)， <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的一个扩域(<span class="arithmatex"><span class="MathJax_Preview">K/F</span><script type="math/tex">K/F</script></span>)，则 <span class="arithmatex"><span class="MathJax_Preview">(E:F)=(E:K)(K:F)</span><script type="math/tex">(E:F)=(E:K)(K:F)</script></span></li>
+<li>有限次扩域必是代数扩域</li>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的一个扩域，<span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 的一个非空子集。如果 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 中的每个元素都是 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的代数元，则 <span class="arithmatex"><span class="MathJax_Preview">F(S)</span><script type="math/tex">F(S)</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的代数扩域</li>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">F,K</span><script type="math/tex">F,K</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 的两个子域且 <span class="arithmatex"><span class="MathJax_Preview">F\subseteq K</span><script type="math/tex">F\subseteq K</script></span>。若 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 的代数扩域，<span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的代数扩域，则 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的代数扩域</li>
+</ul>
+<h3 id="_35">多项式的分裂域</h3>
+<p><strong>定义 <code>代数闭域</code></strong> 如果域 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 上每一个多项式都能分解成 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 上一次多项式的乘积，则称这样的域为<strong>代数闭域</strong>。代数必域没有真正的代数扩域。</p>
+<p><strong>定义 <code>分裂域</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的一个扩域，<span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上一个次数大于零的多项式。如果 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 中可完全分解，而在任何包含 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 但比 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 小的子域上不能完全分解，则称 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的一个<strong>分裂域</strong>， 即 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是包含 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 能在其上分解的最小域</p>
+<ul>
+<li>令 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是域 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上多项式 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 的分裂域，且 <span class="arithmatex"><span class="MathJax_Preview">f(x)=a_0(x-\alpha_1)(x-\alpha_2)\cdots(x-\alpha_n)</span><script type="math/tex">f(x)=a_0(x-\alpha_1)(x-\alpha_2)\cdots(x-\alpha_n)</script></span>，其中 <span class="arithmatex"><span class="MathJax_Preview">a_0\in F,\alpha_i\in E</span><script type="math/tex">a_0\in F,\alpha_i\in E</script></span>。则 <span class="arithmatex"><span class="MathJax_Preview">E=F(\alpha_1,\alpha_2,\cdots,\alpha_n)</span><script type="math/tex">E=F(\alpha_1,\alpha_2,\cdots,\alpha_n)</script></span></li>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上一个 <span class="arithmatex"><span class="MathJax_Preview">n(n&gt;0)</span><script type="math/tex">n(n>0)</script></span> 次的多项式，则 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 上的分裂域存在，并且在同构意义下唯一存在</li>
+</ul>
+<h3 id="_36">有限域</h3>
+<h3 id="_37">伽罗瓦理论</h3>
+<p>伽罗瓦群</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.tabs", "content.code.copy", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

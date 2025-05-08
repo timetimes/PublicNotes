@@ -1,0 +1,1545 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Markdown语法 - notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#markdown" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Markdown语法
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="purple"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="pink"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python/python/" class="md-tabs__link">
+          
+  
+  
+  计算机
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/" class="md-tabs__link">
+          
+  
+  
+  数学
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            计算机
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    语言
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%2CCSS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Html,Css
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/JavaScript/JavaScript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Javascript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数学
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            数学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    代数
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            代数
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    线性代数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    分析
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90/%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    常微分方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    概率论
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            概率论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    概率论与数理统计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      标题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      段落
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      换行
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      强调
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      引用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      列表
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      分割线
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      链接
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      图片
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      表格
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      任务列表
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      注脚
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      注释
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      内嵌 HTML 标签
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="内嵌 HTML 标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      转义字符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      分页
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML表格
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML图片
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      python提取指定标题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdownlatex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markdown中的LaTex
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="markdown">Markdown语法</h1>
+<h2 id="_1">标题</h2>
+<p><strong>要创建标题，请在单词或短语前面添加井号 (#) 。# 的数量代表了标题的级别，共有6级。</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># H1</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gu">## H2</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gu">### H3</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gu">#### H4</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gu">##### H5</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gu">###### H6</span>
+</span></code></pre></div>
+<p><em>不同的 Markdown 应用程序处理 # 和标题之间的空格方式并不一致。为了兼容考虑，请用一个空格在 # 和标题之间进行分隔。</em></p>
+<p>在段落中填写 <code>[TOC]</code> 以显示全文内容的目录结构。</p>
+<h2 id="_2">段落</h2>
+<p><strong>要创建段落，请使用空白行将一行或多行文本进行分隔。</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>I really like using Markdown.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>I think I&#39;ll use it to format all of my documents from now on.
+</span></code></pre></div>
+<blockquote>
+<p>I really like using Markdown.</p>
+<p>I think I'll use it to format all of my documents from now on.</p>
+</blockquote>
+<p><em>不要用空格（spaces）或制表符（ tabs）缩进段落。如必要可以使用两个全角空格字符实体 <code>&amp;emsp;&amp;emsp;</code></em></p>
+<h2 id="_3">换行</h2>
+<p><strong>在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行(<code>&lt;br&gt;</code>)。</strong></p>
+<p><em>为了兼容性，请在行尾添加“结尾空格”或 HTML 的 <code>&lt;br&gt;</code> 标签来实现换行。</em></p>
+<h2 id="_4">强调</h2>
+<p><strong>要加粗文本，请在需要加粗部分的前后各添加两个星号 <code>**</code></strong></p>
+<p><em>要用斜体显示文本，请在需要加粗部分的前后添加一个星号 <code>*</code></em></p>
+<p><strong><em>要同时用粗体和斜体突出显示文本，请在需要加粗部分的前后各添加三个星号 <code>***</code></em></strong>
+~~若要在单词中心放置一条水平线来删除单词，请在需要使用删除线的部分前后各添加两个波浪号~~ <code>~~</code></p>
+<h2 id="_5">引用</h2>
+<p><strong>要创建块引用，请在段落前添加一个 &gt; 符号。</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">&gt; </span><span class="ge">Dorothy followed her through many of the beautiful rooms in her castle.</span>
+</span></code></pre></div>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+</blockquote>
+<p>块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">&gt; </span><span class="ge">Dorothy followed her through many of the beautiful rooms in her castle.</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="ge">&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</span>
+</span></code></pre></div>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
+</blockquote>
+<p>块引用可以嵌套。在要嵌套的段落前添加一个 &gt;&gt; 符号。</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">&gt; </span><span class="ge">Dorothy followed her through many of the beautiful rooms in her castle.</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="ge">&gt;&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</span>
+</span></code></pre></div>
+<p>块引用可以包含其他 Markdown 格式的元素。并非所有元素都可以使用，你需要进行实验以查看哪些元素有效。</p>
+<h2 id="_6">列表</h2>
+<p><strong>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">1.</span> First item
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">2.</span> Second item
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">3.</span> Third item
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">1.</span> Indented item
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="k">2.</span> Indented item
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">4.</span> Fourth item
+</span></code></pre></div>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+<li>Indented item</li>
+<li>Indented item</li>
+<li>Fourth item</li>
+</ol>
+<p><strong>要创建无序列表，请在每个列表项前面添加 - （+或-或*或%）。缩进一个或多个列表项可创建嵌套列表。</strong>但是应该选用相同的符号</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">-</span><span class="w"> </span>First item
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">-</span><span class="w"> </span>Second item
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">-</span><span class="w"> </span>Third item
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Indented item
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Indented item
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">-</span><span class="w"> </span>Fourth item
+</span></code></pre></div>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+<li>Indented item</li>
+<li>Indented item</li>
+<li>Fourth item</li>
+</ul>
+<p>要在保留列表连续性的同时在列表中添加另一种元素，<em>请将该元素缩进四个空格或一个制表符</em></p>
+<h2 id="_7">代码</h2>
+<p><strong>要将单词或短语表示为代码，请将其包裹在反引号 (`) 中。</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>At the command prompt, type <span class="sb">`nano`</span>.
+</span></code></pre></div>
+<p>At the command prompt, type <code>nano</code>.</p>
+<p><em>如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(``)中。</em>
+<strong>要创建代码块，请将代码块的每一行缩进至少四个空格或一个制表符。</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    &lt;html&gt;
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>      &lt;head&gt;
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>      &lt;/head&gt;
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    &lt;/html&gt;
+</span></code></pre></div>
+<p><strong>围栏代码块</strong>
+您在代码块之前和之后的行上使用三个反引号（```）。要添加语法突出显示，请在受防护的代码块之前的反引号旁边指定一种语言。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>    ```json
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    {
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    &quot;firstName&quot;: &quot;John&quot;,
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    &quot;lastName&quot;: &quot;Smith&quot;,
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    &quot;age&quot;: 25
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    }
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    ```
+</span></code></pre></div>
+<p>可以使用代码块描述文件结构：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>.
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>├─ docs/
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>│  └─ blog/
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>│     ├─ posts/
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>│     └─ index.md
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>└─ mkdocs.yml
+</span></code></pre></div>
+<h2 id="_8">分割线</h2>
+<p><strong>要创建分隔线，请在单独一行上使用三个破折号 (---) ，并且不能包含其他内容。为了兼容性，请在分隔线的前后均添加空白行。</strong></p>
+<h2 id="_9">链接</h2>
+<p><strong>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。</strong></p>
+<p><code>[超链接显示名](超链接地址 "超链接title")</code></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>这是一个链接 [<span class="nt">Markdown语法</span>](<span class="na">https://markdown.com.cn &quot;最好的markdown教程&quot;</span>)。
+</span></code></pre></div>
+<p><em>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。</em></p>
+<p><strong>使用尖括号可以很方便地把URL或者email地址变成可点击的链接。</strong></p>
+<p><a href="https://markdown.com.cn">https://markdown.com.cn</a>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#102;&#97;&#107;&#101;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#102;&#97;&#107;&#101;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a></p>
+<p><strong>强调 链接, 在链接语法前后增加星号。 要将链接表示为代码，请在方括号中添加反引号。</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gs">**[LINK](https://markdown.com)**</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="ge">*[Markdown Guide](https://www.markdownguide.org)*</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>[<span class="sb">`code`</span>](#code)
+</span></code></pre></div>
+<p><strong><a href="https://markdown.com">LINK</a></strong>
+<em><a href="https://www.markdownguide.org">Markdown Guide</a></em>
+<a href="#code"><code>code</code></a></p>
+<p><strong>引用样式链接是一种特殊的链接，它使URL在Markdown中更易于显示和阅读。参考样式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。</strong></p>
+<ol>
+<li>引用类型的链接的第一部分使用两组括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。</li>
+<li>引用类型链接的第二部分使用以下属性设置格式：</li>
+<li>放在括号中的标签，其后紧跟一个冒号和至少一个空格（例如[label]:）。</li>
+<li>链接的URL，可以选择将其括在尖括号中。</li>
+<li>链接的可选标题，可以将其括在双引号，单引号或括号中。</li>
+</ol>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>[<span class="nt">example</span>][<span class="nl">1</span>]
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>[<span class="nl">1</span>]: <span class="na">https://example.com</span>
+</span></code></pre></div>
+<p>不同的 Markdown 应用程序处理URL中间的空格方式不一样。为了兼容性，请尽量使用%20代替空格。</p>
+<p><strong>页内超链接</strong>
+在你准备跳转到的指定标题后插入锚点{#标记}，然后在文档的其它地方写上连接到锚点的链接。</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gu">## 目录{#index}</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>跳转到[目录](#index)
+</span></code></pre></div>
+<h2 id="_10">图片</h2>
+<p><strong>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</strong></p>
+<p><code>![图片alt](图片链接 "图片title")</code></p>
+<p><strong>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。</strong></p>
+<p><code>[![图片alt](图片链接 "图片title")](链接)</code></p>
+<h2 id="_11">表格</h2>
+<p><strong>要添加表，请使用三个或多个连字符（---）创建每列的标题，并使用管道（|）分隔每列。您可以选择在表的任一端添加管道。</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>| Syntax | Description |
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>| ----| --- |
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>| Header | Title |
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>| Paragraph | Text |
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+<p><strong>您可以通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心。</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>| Syntax      | Description | Test Text     |
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>| :---        |    :----:   |          ---: |
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>| Header      | Title       | Here&#39;s this   |
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>| Paragraph   | Text        | And more      |
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Syntax</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: right;">Test Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Header</td>
+<td style="text-align: center;">Title</td>
+<td style="text-align: right;">Here's this</td>
+</tr>
+<tr>
+<td style="text-align: left;">Paragraph</td>
+<td style="text-align: center;">Text</td>
+<td style="text-align: right;">And more</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>您可以在表格中设置文本格式。例如，您可以添加链接，代码（仅反引号（`）中的单词或短语，而不是代码块）和强调。</li>
+<li>您不能添加标题，块引用，列表，水平规则，图像或HTML标签。</li>
+<li>您可以使用表格的HTML字符代码（<code>&amp;#124;</code>）或使用转义字符（<code>\|</code>）在表中显示竖线（|）字符。</li>
+<li>表格单元格里换行可以借助于 HTML 里的 <code>&lt;br /&gt;</code> 实现</li>
+</ul>
+<h2 id="_12">任务列表</h2>
+<p><strong>任务列表使您可以创建带有复选框的项目列表。在支持任务列表的Markdown应用程序中，复选框将显示在内容旁边。要创建任务列表，请在任务列表项之前添加破折号-和方括号[ ]，并在[ ]前面加上空格。要选择一个复选框，请在方括号[x]之间添加 x 。</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">- [x]</span> Write the press release
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">- [ ]</span> Update the website
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">- [ ]</span> Contact the media
+</span></code></pre></div>
+<ul>
+<li>[X] Write the press release</li>
+<li>[ ] Update the website</li>
+<li>[ ] Contact the media</li>
+</ul>
+<h2 id="_13">注脚</h2>
+<p>在需要添加注脚的文字后加上脚注名字[^注脚名字],称为加注。 然后在文本的任意位置(一般在最后)添加脚注，脚注前必须有对应的脚注名字。</p>
+<p>注意：经测试注脚与注脚之间必须空一行，不然会失效。成功后会发现，即使你没有把注脚写在文末，经Markdown转换后，也会自动归类到文章的最后。</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>使用 Markdown[^1]可以效率的书写文档, 直接转换成 HTML[^2]
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>[<span class="nl">^1</span>]: <span class="na">Markdown 是一种纯文本标记语言</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>[<span class="nl">^2</span>]: <span class="na">HyperText Markup Language 超文本标记语言</span>
+</span></code></pre></div>
+<p>使用 Markdown[^1]可以效率的书写文档, 直接转换成 HTML[^2]</p>
+<h2 id="_14">注释</h2>
+<p>不是很推荐在markdown中使用注释，除非确实有必要</p>
+<p>①Html隐藏
+   <code>&lt;div style="display:none"&gt;这是一段注释&lt;/div&gt;</code>
+②Xml注释</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>   <span class="cm">&lt;!--</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="cm">   整段整段的不可见内容</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="cm">   --&gt;</span>
+</span></code></pre></div>
+<p>③Markdown reference Links</p>
+<blockquote>
+<p>在reference形式中，链接(link)分成了展示部分和引用部分，其中引用(reference)部分是不直接显示出来的。</p>
+</blockquote>
+<h2 id="html">内嵌 HTML 标签</h2>
+<p><strong>对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需 HTML 标签添加到 Markdown 文本中即可。</strong>
+Markdown 语法在 HTML 区块标签中将不会被进行处理</p>
+<h3 id="_15">转义字符</h3>
+<p><strong>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</strong></p>
+<blockquote>
+<p>可转义字符: \ ` * _ {} [] () # + - . ! |</p>
+</blockquote>
+<p>在 HTML 文件中，有两个字符需要特殊处理： &lt; 和 &amp; 。 &lt; 符号用于起始标签，&amp; 符号则用于标记 HTML 实体，如果你只是想要使用这些符号，要使用实体的形式，像是 <code>&amp;lt;</code> 和 <code>&amp;amp;</code></p>
+<p><code>&amp;ensp;</code> 代表半角空格，<code>&amp;emsp;</code> 代表全角空格。</p>
+<h3 id="_16">分页</h3>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">STYLE</span><span class="o">=</span><span class="s">&quot;page-break-after: always;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="cm">&lt;!-- 可以帮助转换pdf时分页 --&gt;</span>
+</span></code></pre></div>
+<h3 id="html_1">HTML表格</h3>
+<p>使用HTML表格可以实现更加强大的效果，不过有些效果（如文字颜色等）需要markdown编译器的支持</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">&lt;</span><span class="nt">table</span>  <span class="na">style</span><span class="o">=</span><span class="s">&quot;text-align: center; margin-left: 175px;&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>国际单位制<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>基本量<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>基本量纲<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>SI单位<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>名称<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>符号<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>长度<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>L<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>米<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>m<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>质量<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>M<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>千克<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>kg<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-21-23"><a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-21-24"><a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<table  style="text-align: center; margin-left: 175px;">
+    <caption>国际单位制</caption>
+    <tr>
+        <th rowspan="2">基本量</th>
+        <th rowspan="2">基本量纲</th>
+        <th colspan="2">SI单位</th>
+    </tr>
+    <tr>
+        <th>名称</th>
+        <th>符号</th>
+    </tr>
+    <tr>
+        <td>长度</td>
+        <td>L</td>
+        <td>米</td>
+        <td>m</td>
+    </tr>
+    <tr>
+        <td>质量</td>
+        <td>M</td>
+        <td>千克</td>
+        <td>kg</td>
+    </tr>
+    <tr>
+        <td>时间</td>
+        <td>T</td>
+        <td>秒</td>
+        <td>s</td>
+    </tr>
+    <tr>
+        <td>电流</td>
+        <td>I</td>
+        <td>安[培]</td>
+        <td>A</td>
+    </tr>
+    <tr>
+        <td>温度</td>
+        <td>O</td>
+        <td>开[尔文]</td>
+        <td>K</td>
+    </tr>
+    <tr>
+        <td>物质的量</td>
+        <td>N</td>
+        <td>摩[尔]</td>
+        <td>mol</td>
+    </tr>
+    <tr>
+        <td>发光强度</td>
+        <td>J</td>
+        <td>坎[德拉]</td>
+        <td>cd</td>
+    </tr>
+</table>
+
+<h3 id="html_2">HTML图片</h3>
+<p>Markdown格式生成的图片默认居左对齐，大小受图片实际大小限制。如果只指定宽度或高度，另一个按照长宽比自动设定</p>
+<p><code>&lt;div&gt;&lt;img style="width: 300px; height: 500px" src=".\image/latex_page-0001.jpg" alt="图片案例"/&gt;&lt;/div&gt;</code></p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;text-align: center;&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;600px&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;initial&quot;</span><span class="p">&gt;</span> <span class="cm">&lt;!-- 设置文字居中、容器的长度与宽度  --&gt;</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;float: left; width: 300px; height: 500px&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;.\image/latex_page-0001.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;图片案例&quot;</span><span class="p">/&gt;</span> 
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>            <span class="cm">&lt;!-- 设置图片居左、图片的长度与宽度 --&gt;</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>                可以实现图文混排<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>                使用br标签换行
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>            <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>        <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>markdown的内容...
+</span></code></pre></div>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: table; text-align: center; border: none 0px; width: 600px; height: 500px;&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;float: left; width: 300px; height: 500px&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;.\image/latex_page-0001.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;图片案例&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;鼠标悬停文字&quot;</span><span class="p">/&gt;</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: inline-block; width: 300px; height: 500px;&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>        可以实现图文混排<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>        使用br标签换行
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>markdown的内容...
+</span></code></pre></div>
+<div style="display: table; text-align: center; border: none 0px; width: 600px; height: 500px;">
+    <img style="float: left; width: 300px; height: 500px" src=".\image/latex_page-0001.jpg" alt="图片案例" title="鼠标悬停文字"/>
+    <div style="display: inline-block; width: 300px; height: 500px;">
+        可以实现图文混排<br>
+        使用br标签换行
+    </div>
+</div>
+
+<h2 id="python">python提取指定标题</h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">extract_section</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="n">output_file</span><span class="p">,</span> <span class="n">target_heading</span><span class="p">):</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="sd">    从 Markdown 文件中提取从指定标题开始到遇到更高级别标题为止的内容，并保存到新文件中。</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="sd">    忽略代码块中的内容。</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="sd">    :param input_file: 输入的 Markdown 文件路径</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="sd">    :param output_file: 输出的 Markdown 文件路径</span>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="sd">    :param target_heading: 目标标题（支持 #、##、### 等）</span>
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>    <span class="c1"># 移除代码块内容（以 ``` 或 ~~~ 包裹的内容）</span>
+</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>    <span class="n">code_block_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(```.*?```|~~~.*?~~~)&quot;</span>
+</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>    <span class="n">content_without_code</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">code_block_pattern</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="s1">&#39; &#39;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span> <span class="n">content</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">S</span><span class="p">)</span>
+</span><span id="__span-24-18"><a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a>
+</span><span id="__span-24-19"><a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a>    <span class="c1"># 匹配目标标题的正则表达式</span>
+</span><span id="__span-24-20"><a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a>    <span class="n">pattern</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;^(#+)\s+</span><span class="si">{</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">target_heading</span><span class="p">)</span><span class="si">}</span><span class="s2">\s*.*?$&quot;</span>  <span class="c1"># 匹配指定标题</span>
+</span><span id="__span-24-21"><a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a>    <span class="n">matches</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">content_without_code</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span><span class="p">)</span>
+</span><span id="__span-24-22"><a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a>
+</span><span id="__span-24-23"><a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a>    <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">matches</span><span class="p">:</span>
+</span><span id="__span-24-24"><a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a>        <span class="n">heading_level</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># 获取标题级别（# 的数量）</span>
+</span><span id="__span-24-25"><a id="__codelineno-24-25" name="__codelineno-24-25" href="#__codelineno-24-25"></a>        <span class="n">start_pos</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>  <span class="c1"># 标题的起始位置</span>
+</span><span id="__span-24-26"><a id="__codelineno-24-26" name="__codelineno-24-26" href="#__codelineno-24-26"></a>
+</span><span id="__span-24-27"><a id="__codelineno-24-27" name="__codelineno-24-27" href="#__codelineno-24-27"></a>        <span class="c1"># 查找下一个更高级别的标题（# 数量更少的标题）</span>
+</span><span id="__span-24-28"><a id="__codelineno-24-28" name="__codelineno-24-28" href="#__codelineno-24-28"></a>        <span class="n">next_heading_pattern</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;^(#</span><span class="se">{{</span><span class="s2">1,</span><span class="si">{</span><span class="n">heading_level</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="se">}}</span><span class="s2">)\s+.*?$&quot;</span>
+</span><span id="__span-24-29"><a id="__codelineno-24-29" name="__codelineno-24-29" href="#__codelineno-24-29"></a>        <span class="n">next_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">next_heading_pattern</span><span class="p">,</span> <span class="n">content_without_code</span><span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">():],</span> <span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span><span class="p">)</span>
+</span><span id="__span-24-30"><a id="__codelineno-24-30" name="__codelineno-24-30" href="#__codelineno-24-30"></a>
+</span><span id="__span-24-31"><a id="__codelineno-24-31" name="__codelineno-24-31" href="#__codelineno-24-31"></a>        <span class="k">if</span> <span class="n">next_match</span><span class="p">:</span>
+</span><span id="__span-24-32"><a id="__codelineno-24-32" name="__codelineno-24-32" href="#__codelineno-24-32"></a>            <span class="n">end_pos</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">()</span> <span class="o">+</span> <span class="n">next_match</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span><span id="__span-24-33"><a id="__codelineno-24-33" name="__codelineno-24-33" href="#__codelineno-24-33"></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-24-34"><a id="__codelineno-24-34" name="__codelineno-24-34" href="#__codelineno-24-34"></a>            <span class="n">end_pos</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>  <span class="c1"># 如果没有更高级别标题，则提取到文件末尾</span>
+</span><span id="__span-24-35"><a id="__codelineno-24-35" name="__codelineno-24-35" href="#__codelineno-24-35"></a>
+</span><span id="__span-24-36"><a id="__codelineno-24-36" name="__codelineno-24-36" href="#__codelineno-24-36"></a>        <span class="c1"># 提取内容（从原始内容中提取，而不是从移除代码块的内容中提取）</span>
+</span><span id="__span-24-37"><a id="__codelineno-24-37" name="__codelineno-24-37" href="#__codelineno-24-37"></a>        <span class="n">extracted_content</span> <span class="o">=</span> <span class="n">content</span><span class="p">[</span><span class="n">start_pos</span><span class="p">:</span><span class="n">end_pos</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span><span id="__span-24-38"><a id="__codelineno-24-38" name="__codelineno-24-38" href="#__codelineno-24-38"></a>
+</span><span id="__span-24-39"><a id="__codelineno-24-39" name="__codelineno-24-39" href="#__codelineno-24-39"></a>        <span class="c1"># 写入到输出文件</span>
+</span><span id="__span-24-40"><a id="__codelineno-24-40" name="__codelineno-24-40" href="#__codelineno-24-40"></a>        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-24-41"><a id="__codelineno-24-41" name="__codelineno-24-41" href="#__codelineno-24-41"></a>            <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">extracted_content</span><span class="p">)</span>
+</span><span id="__span-24-42"><a id="__codelineno-24-42" name="__codelineno-24-42" href="#__codelineno-24-42"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;提取成功，内容已保存到 </span><span class="si">{</span><span class="n">output_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-24-43"><a id="__codelineno-24-43" name="__codelineno-24-43" href="#__codelineno-24-43"></a>        <span class="k">return</span>
+</span><span id="__span-24-44"><a id="__codelineno-24-44" name="__codelineno-24-44" href="#__codelineno-24-44"></a>
+</span><span id="__span-24-45"><a id="__codelineno-24-45" name="__codelineno-24-45" href="#__codelineno-24-45"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;未找到标题 &#39;</span><span class="si">{</span><span class="n">target_heading</span><span class="si">}</span><span class="s2">&#39; 的内容。&quot;</span><span class="p">)</span>
+</span><span id="__span-24-46"><a id="__codelineno-24-46" name="__codelineno-24-46" href="#__codelineno-24-46"></a>
+</span><span id="__span-24-47"><a id="__codelineno-24-47" name="__codelineno-24-47" href="#__codelineno-24-47"></a><span class="c1"># 示例用法</span>
+</span><span id="__span-24-48"><a id="__codelineno-24-48" name="__codelineno-24-48" href="#__codelineno-24-48"></a><span class="n">input_md_file</span> <span class="o">=</span> <span class="s2">&quot;input.md&quot;</span>  <span class="c1"># 输入的 Markdown 文件路径</span>
+</span><span id="__span-24-49"><a id="__codelineno-24-49" name="__codelineno-24-49" href="#__codelineno-24-49"></a><span class="n">output_md_file</span> <span class="o">=</span> <span class="s2">&quot;output.md&quot;</span>  <span class="c1"># 输出的 Markdown 文件路径</span>
+</span><span id="__span-24-50"><a id="__codelineno-24-50" name="__codelineno-24-50" href="#__codelineno-24-50"></a><span class="n">heading_to_extract</span> <span class="o">=</span> <span class="s2">&quot;四级标题&quot;</span>  <span class="c1"># 替换为你想提取的标题</span>
+</span><span id="__span-24-51"><a id="__codelineno-24-51" name="__codelineno-24-51" href="#__codelineno-24-51"></a>
+</span><span id="__span-24-52"><a id="__codelineno-24-52" name="__codelineno-24-52" href="#__codelineno-24-52"></a><span class="n">extract_section</span><span class="p">(</span><span class="n">input_md_file</span><span class="p">,</span> <span class="n">output_md_file</span><span class="p">,</span> <span class="n">heading_to_extract</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="markdownlatex">Markdown中的LaTex</h2>
+<p>LaTeX 公式写法有两种，一种是用在正文中的，一种是单独显示的</p>
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="s">$</span><span class="nb">...</span><span class="s">$</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="sb">$$</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="nb">...默认居中</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="s">$$</span>
+</span></code></pre></div>
+<p>\displaystyle 转义符\（反斜杠）+“关键词”</p>
+<p>几乎所有latex语法都能够嵌套
+\alpha要跟符号（包括空格符），不能直接跟字母，不推荐接数字</p>
+<p>默认字体(罗马斜体) <span class="arithmatex"><span class="MathJax_Preview">ABCabc123</span><script type="math/tex">ABCabc123</script></span> <span class="arithmatex"><span class="MathJax_Preview">\mathrm{ABCabc123}</span><script type="math/tex">\mathrm{ABCabc123}</script></span></p>
+<p>字体加粗 <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{ABCabc123}</span><script type="math/tex">\boldsymbol{ABCabc123}</script></span>
+直立的 <span class="arithmatex"><span class="MathJax_Preview">\textup{ABCabc123}</span><script type="math/tex">\textup{ABCabc123}</script></span>
+意大利斜体 <span class="arithmatex"><span class="MathJax_Preview">\textit{ABCabc123}</span><script type="math/tex">\textit{ABCabc123}</script></span><span class="arithmatex"><span class="MathJax_Preview">\mathit{ABCabc123}</span><script type="math/tex">\mathit{ABCabc123}</script></span>
+斜体 <span class="arithmatex"><span class="MathJax_Preview">\textstyle{ABCabc123}</span><script type="math/tex">\textstyle{ABCabc123}</script></span></p>
+<p>等宽 <span class="arithmatex"><span class="MathJax_Preview">\mathtt{ABCabc123}</span><script type="math/tex">\mathtt{ABCabc123}</script></span> <span class="arithmatex"><span class="MathJax_Preview">\texttt{}</span><script type="math/tex">\texttt{}</script></span>
+黑体 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{ABCabc123}</span><script type="math/tex">\mathbf{ABCabc123}</script></span> <span class="arithmatex"><span class="MathJax_Preview">\textbf{}</span><script type="math/tex">\textbf{}</script></span>
+黑板报体 <span class="arithmatex"><span class="MathJax_Preview">\mathbb{ABCabc123}</span><script type="math/tex">\mathbb{ABCabc123}</script></span>
+罗马体 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{ABCabc123}</span><script type="math/tex">\mathrm{ABCabc123}</script></span> <span class="arithmatex"><span class="MathJax_Preview">\textrm{}</span><script type="math/tex">\textrm{}</script></span> <span class="arithmatex"><span class="MathJax_Preview">\text{}</span><script type="math/tex">\text{}</script></span>
+无衬线体 <span class="arithmatex"><span class="MathJax_Preview">\mathsf{ABCabc123}</span><script type="math/tex">\mathsf{ABCabc123}</script></span> <span class="arithmatex"><span class="MathJax_Preview">\textsf{}</span><script type="math/tex">\textsf{}</script></span>
+手写体 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{ABCabc123}</span><script type="math/tex">\mathcal{ABCabc123}</script></span>
+哥特字体 <span class="arithmatex"><span class="MathJax_Preview">\mathfrak{ABCabc123}</span><script type="math/tex">\mathfrak{ABCabc123}</script></span>
+哥特字体 <span class="arithmatex"><span class="MathJax_Preview">\scriptstyle{ABCabc123}</span><script type="math/tex">\scriptstyle{ABCabc123}</script></span> <span class="arithmatex"><span class="MathJax_Preview">\scriptscriptstyle{ABCabc123}</span><script type="math/tex">\scriptscriptstyle{ABCabc123}</script></span></p>
+<p>字号尺寸
+<span class="arithmatex"><span class="MathJax_Preview">{\tiny abc\text{极小}tiny}</span><script type="math/tex">{\tiny abc\text{极小}tiny}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">{\scriptsize abc \text{超小} scriptsize}</span><script type="math/tex">{\scriptsize abc \text{超小} scriptsize}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">{\small abc \text{小} small}</span><script type="math/tex">{\small abc \text{小} small}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">{\normalsize abc \text{正常} normal}</span><script type="math/tex">{\normalsize abc \text{正常} normal}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">{\large abc \text{大} large}</span><script type="math/tex">{\large abc \text{大} large}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">{\Large abc \text{超大} Large}</span><script type="math/tex">{\Large abc \text{超大} Large}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">{\LARGE abc \text{特大} LARGE}</span><script type="math/tex">{\LARGE abc \text{特大} LARGE}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">{\huge abc \text{巨大} huge}</span><script type="math/tex">{\huge abc \text{巨大} huge}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">{\Huge abc \text{巨无霸} Huge}</span><script type="math/tex">{\Huge abc \text{巨无霸} Huge}</script></span></p>
+<p><img alt="^-^" src="../image/latex_page-0001.jpg" />
+<img alt="^-^" src="../image/latex_page-0002.jpg" />
+<img alt="^-^" src="../image/latex_page-0003.jpg" />
+<img alt="^-^" src="../image/latex_page-0004.jpg" /></p>
+<p>\omicron</p>
+<p>空集<span class="arithmatex"><span class="MathJax_Preview">\varnothing</span><script type="math/tex">\varnothing</script></span> <code>\varnothing</code>
+<strong>或</strong> <span class="arithmatex"><span class="MathJax_Preview">\lor</span><script type="math/tex">\lor</script></span>、<strong>与</strong> <span class="arithmatex"><span class="MathJax_Preview">\land</span><script type="math/tex">\land</script></span>、<strong>非</strong> <span class="arithmatex"><span class="MathJax_Preview">\lnot</span><script type="math/tex">\lnot</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\nabla</span><script type="math/tex">\nabla</script></span> <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> <span class="arithmatex"><span class="MathJax_Preview">\mathcal{L}</span><script type="math/tex">\mathcal{L}</script></span> <span class="arithmatex"><span class="MathJax_Preview">\mathscr{L}</span><script type="math/tex">\mathscr{L}</script></span></p>
+<p>行内公式： <span class="arithmatex"><span class="MathJax_Preview">\lim_{ n \to \infty },\lim\limits_{ n \to \infty }</span><script type="math/tex">\lim_{ n \to \infty },\lim\limits_{ n \to \infty }</script></span>
+或者 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle \lim_{ n \to \infty }</span><script type="math/tex">\displaystyle \lim_{ n \to \infty }</script></span></p>
+<p>latex文字上面，下面大括号用法
+<span class="arithmatex"><span class="MathJax_Preview">\varphi(e_{i})=(f_{1}(e_{i}),\cdot\cdot\cdot, f_{n}(e_{i}))=( \overbrace{ 0,\cdot\cdot\cdot,0 }^{i-1\text{个}},1,0,\cdot\cdot\cdot,0), i=1,2,\cdot\cdot\cdot,n.</span><script type="math/tex">\varphi(e_{i})=(f_{1}(e_{i}),\cdot\cdot\cdot, f_{n}(e_{i}))=( \overbrace{ 0,\cdot\cdot\cdot,0 }^{i-1\text{个}},1,0,\cdot\cdot\cdot,0), i=1,2,\cdot\cdot\cdot,n.</script></span></p>
+<p>不同的"frac"会生成不同大小的分式。\tfrac \frac \dfrac \cfrac
+"d"代表"display"，会生成一个比较大的适合显示的分数： <span class="arithmatex"><span class="MathJax_Preview">\dfrac{3}{7}</span><script type="math/tex">\dfrac{3}{7}</script></span>
+"t"代表"text"，会生成一个比较小的适合在一行文字内显示的分数： <span class="arithmatex"><span class="MathJax_Preview">\tfrac{3}{7}</span><script type="math/tex">\tfrac{3}{7}</script></span>
+还有一个\cfrac命令是用于连分数的，"c"代表"continued" <span class="arithmatex"><span class="MathJax_Preview">\cfrac{3}{7+\cfrac{3}{7+\cfrac{3}{7+\ldots}}}</span><script type="math/tex">\cfrac{3}{7+\cfrac{3}{7+\cfrac{3}{7+\ldots}}}</script></span>
+\cfrac 在 \dfrac 的基础上添加了可让分子左对齐或右对齐的可选参数：[l] 左对齐、[r] 右对齐<span class="arithmatex"><span class="MathJax_Preview">\cfrac[l]1{1111}+\cfrac[r]1{1111}</span><script type="math/tex">\cfrac[l]1{1111}+\cfrac[r]1{1111}</script></span></p>
+<p>弧线
+Latex可以通过以下方式实现：</p>
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">\usepackage</span><span class="nb">{</span>yhmath<span class="nb">}</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="s">$</span><span class="nv">\wideparen</span><span class="nb">{ABCDEFG}</span><span class="s">$</span>
+</span></code></pre></div>
+<p>上面这种方式在markdown中并不支持，这里提供另外的两种思路：</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\mathop{\frown}\limits_{AB}</span><script type="math/tex">\mathop{\frown}\limits_{AB}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">\mathop{AB}\limits^{\frown}</span><script type="math/tex">\mathop{AB}\limits^{\frown}</script></span></p>
+<p>公式中括号的应用，可以用一系列命令 (\big, \Big, \bigg, \Bigg) 改变括号大<br />
+小
+也可以用自动模式自动调节大小 <span class="arithmatex"><span class="MathJax_Preview">\left( 3+\dfrac{7x+5}{1+y^2} \right)</span><script type="math/tex">\left( 3+\dfrac{7x+5}{1+y^2} \right)</script></span>
+用“<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">”与“</span><script type="math/tex">”与“</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">”与“</span><script type="math/tex">”与“</script></span></script></span>”显示公式，可以自动居中，括号必须成对出现，如果在一行中只<br />
+有一半的括号，则要添加对应的“影子括号”，例如在一行中有“\left(”，则要在后面添加“\right.”</p>
+<p>分隔符\middle
+$$ P=\left(A=2|\frac{A^2}{B}&gt;4\right) $$ $$ P=\left(A=2\middle|\frac{A^2}{B}&gt;4\right) $$</p>
+<p>向量a使用<span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{a}</span><script type="math/tex">\boldsymbol{a}</script></span>
+\mathbf的渲染效果是加粗的正体字符，而\boldsymbol的渲染效果是加粗的斜体字符</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\tbinom{n}{r}</span><script type="math/tex">\tbinom{n}{r}</script></span> <span class="arithmatex"><span class="MathJax_Preview">C_{n}^{r}</span><script type="math/tex">C_{n}^{r}</script></span> <span class="arithmatex"><span class="MathJax_Preview">{n \choose r}</span><script type="math/tex">{n \choose r}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">\varnothing\emptyset</span><script type="math/tex">\varnothing\emptyset</script></span></p>
+<p>[^1]: Markdown 是一种纯文本标记语言</p>
+<p>[^2]: HyperText Markup Language 超文本标记语言</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.sections", "navigation.tabs", "content.code.copy", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

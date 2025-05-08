@@ -1,0 +1,2267 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../%E5%88%86%E6%9E%90/%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>概率论与数理统计 - notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              概率论与数理统计
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="purple"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="pink"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python/python/" class="md-tabs__link">
+          
+  
+  
+  计算机
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../%E4%BB%A3%E6%95%B0/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/" class="md-tabs__link">
+          
+  
+  
+  数学
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            计算机
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    语言
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%AD%E8%A8%80/%E5%85%B6%E4%BB%96%E8%AF%AD%E6%B3%95/HTML%2CCSS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Html,Css
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/JavaScript/JavaScript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Javascript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    数学
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            数学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    代数
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            代数
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BB%A3%E6%95%B0/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    线性代数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    分析
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%86%E6%9E%90/%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    常微分方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    概率论
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            概率论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    概率论与数理统计
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    概率论与数理统计
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机事件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="随机事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      事件的关系与运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机事件的概率
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="随机事件的概率">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      概型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      条件概率
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      事件的独立性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      一维随机变量及分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一维随机变量及分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      离散型随机变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      连续型随机变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机变量的函数的分布
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      多维随机变量及分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多维随机变量及分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      二维离散型随机变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      二维连续性随机变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机变量的独立性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      两个随机变量的函数的分布
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机变量的数字特征
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="随机变量的数字特征">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      数学期望
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      方差
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方差">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      切比雪夫不等式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      协方差与相关系数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      大数定律和中心极限定理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="大数定律和中心极限定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      大数定律
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      中心极限定理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      样本及抽样分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="样本及抽样分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      样本分布函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="样本分布函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      统计量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      抽样分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="抽样分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      三个重要分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      正态总体统计量的分布
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数估计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="参数估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      点估计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      区间估计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="区间估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      正态总体参数的区间估计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      非正态总体参数的区间估计
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      假设检验
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="假设检验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      正态总体均值的检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      正态总体方差的检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      大样本检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    <span class="md-ellipsis">
+      p值检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      假设检验的两类错误
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      非参数假设检验
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      线性回归分析与方差分析
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机事件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="随机事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      事件的关系与运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机事件的概率
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="随机事件的概率">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      概型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      条件概率
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      事件的独立性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      一维随机变量及分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一维随机变量及分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      离散型随机变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      连续型随机变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机变量的函数的分布
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      多维随机变量及分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多维随机变量及分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      二维离散型随机变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      二维连续性随机变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机变量的独立性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      两个随机变量的函数的分布
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机变量的数字特征
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="随机变量的数字特征">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      数学期望
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      方差
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方差">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      切比雪夫不等式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      协方差与相关系数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      大数定律和中心极限定理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="大数定律和中心极限定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      大数定律
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      中心极限定理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      样本及抽样分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="样本及抽样分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      样本分布函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="样本分布函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      统计量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      抽样分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="抽样分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      三个重要分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      正态总体统计量的分布
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数估计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="参数估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      点估计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      区间估计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="区间估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      正态总体参数的区间估计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      非正态总体参数的区间估计
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      假设检验
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="假设检验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      正态总体均值的检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      正态总体方差的检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      大样本检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    <span class="md-ellipsis">
+      p值检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      假设检验的两类错误
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      非参数假设检验
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      线性回归分析与方差分析
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">概率论</h1>
+<h2 id="_2">随机事件</h2>
+<p><strong>随机试验</strong>(<span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span>)：</p>
+<ol>
+<li>试验的可能结果不止一个，并且能事先明确试验的所有可能结果</li>
+<li>进行试验前不能确定哪一个结果会出现</li>
+</ol>
+<p><strong>样本空间</strong>(<span class="arithmatex"><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span>)：</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span>的所有可能结果组成的集合</li>
+</ul>
+<p><span class="arithmatex"><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span>中的元素，即<span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span>的每个结果称为样本点(<span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>)</p>
+<p><strong>随机事件</strong>：</p>
+<ul>
+<li>试验<span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span>的样本空间<span class="arithmatex"><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span>的子集</li>
+</ul>
+<p>必然事件：<span class="arithmatex"><span class="MathJax_Preview">\Omega\subset\Omega</span><script type="math/tex">\Omega\subset\Omega</script></span>
+不可能事件：<span class="arithmatex"><span class="MathJax_Preview">\varnothing\subset\Omega</span><script type="math/tex">\varnothing\subset\Omega</script></span></p>
+<h3 id="_3">事件的关系与运算</h3>
+<p><em>设三个事件分别为A，B，C。</em></p>
+<ol>
+<li>包含A<span class="arithmatex"><span class="MathJax_Preview">\subset</span><script type="math/tex">\subset</script></span>B：A必然导致B发生</li>
+<li>相等A=B：A发生当且仅当B发生</li>
+<li>互斥A<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>B=<span class="arithmatex"><span class="MathJax_Preview">\varnothing</span><script type="math/tex">\varnothing</script></span>：A与B不能同时发生</li>
+<li>对立A<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>B=<span class="arithmatex"><span class="MathJax_Preview">\varnothing</span><script type="math/tex">\varnothing</script></span>且A+B=<span class="arithmatex"><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span>：A与B不能同时发生，且至少有一个发生（也叫逆事件）</li>
+</ol>
+<p>互斥是对立的必要不充分条件</p>
+<ol>
+<li>和事件<span class="arithmatex"><span class="MathJax_Preview">A{\cup}B</span><script type="math/tex">A{\cup}B</script></span>（或A+B）：和事件发生<span class="arithmatex"><span class="MathJax_Preview">\Leftrightarrow</span><script type="math/tex">\Leftrightarrow</script></span>A或B发生<span class="arithmatex"><span class="MathJax_Preview">\Leftrightarrow</span><script type="math/tex">\Leftrightarrow</script></span>A与B至少有一个发生</li>
+<li>积事件A<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>B（或AB）：积事件发生<span class="arithmatex"><span class="MathJax_Preview">\Leftrightarrow</span><script type="math/tex">\Leftrightarrow</script></span>A与B同时发生</li>
+<li>差事件A-B（即<span class="arithmatex"><span class="MathJax_Preview">A\overline{B}</span><script type="math/tex">A\overline{B}</script></span>）：差事件发生<span class="arithmatex"><span class="MathJax_Preview">\Leftrightarrow</span><script type="math/tex">\Leftrightarrow</script></span>A发生而B不发生</li>
+<li>补事件<span class="arithmatex"><span class="MathJax_Preview">\overline{A}</span><script type="math/tex">\overline{A}</script></span>(即<span class="arithmatex"><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span>-A)：补事件发生<span class="arithmatex"><span class="MathJax_Preview">\Leftrightarrow</span><script type="math/tex">\Leftrightarrow</script></span>A不发生<span class="arithmatex"><span class="MathJax_Preview">\Leftrightarrow</span><script type="math/tex">\Leftrightarrow</script></span>样本空间与A的差事件</li>
+</ol>
+<p>运算律</p>
+<ol>
+<li>交换律：A<span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span>B=B<span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span>A,A<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>B=B<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>A</li>
+<li>结合律：A<span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span>(B<span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span>C)=(A<span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span>B)<span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span>C,A<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>(B<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>C)=(A<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>B)<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>C</li>
+<li>分配律：A<span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span>(B<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>C)=(A<span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span>B)<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>(A<span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span>C),A<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>(B<span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span>C)=(A<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>B)<span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span>(A<span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span>C)</li>
+<li>对偶律：<span class="arithmatex"><span class="MathJax_Preview">\overline{A{\cup}B}</span><script type="math/tex">\overline{A{\cup}B}</script></span>=<span class="arithmatex"><span class="MathJax_Preview">\overline{A}\cap\overline{B}</span><script type="math/tex">\overline{A}\cap\overline{B}</script></span>,<span class="arithmatex"><span class="MathJax_Preview">\overline{A{\cap}B}</span><script type="math/tex">\overline{A{\cap}B}</script></span>=<span class="arithmatex"><span class="MathJax_Preview">\overline{A}\cup\overline{B}</span><script type="math/tex">\overline{A}\cup\overline{B}</script></span></li>
+</ol>
+<p><img alt="drawio" src="../%E9%9B%86%E5%90%88%E5%85%B3%E7%B3%BB%E5%9B%BE.png" /></p>
+<h3 id="_4">随机事件的概率</h3>
+<p><strong>频率</strong>：在相同条件下重复试验，事件出现的次数<span class="arithmatex"><span class="MathJax_Preview">n_A</span><script type="math/tex">n_A</script></span>与试验次数<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的的比值，记为<span class="arithmatex"><span class="MathJax_Preview">f_n(A)</span><script type="math/tex">f_n(A)</script></span></p>
+<p><strong>概率</strong>：事件A发生的可能性大小的量度，概率为频率的稳定值，记为<span class="arithmatex"><span class="MathJax_Preview">P(A)</span><script type="math/tex">P(A)</script></span></p>
+<p><strong>定义 <code>概率</code></strong> 设E是随机试验，<span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>是它的样本空间，对E的每一个事件A，将其对应于一个实数，记为<span class="arithmatex"><span class="MathJax_Preview">P(A)</span><script type="math/tex">P(A)</script></span>，称为事件A的概率，如果集合函数<span class="arithmatex"><span class="MathJax_Preview">P(*)</span><script type="math/tex">P(*)</script></span>满足下列条件：</p>
+<ol>
+<li>非负性：对任意一个事件，有<span class="arithmatex"><span class="MathJax_Preview">P(A) \geqslant 0</span><script type="math/tex">P(A) \geqslant 0</script></span>；</li>
+<li>规范性：对必然事件，有<span class="arithmatex"><span class="MathJax_Preview">P(\omega) = 1</span><script type="math/tex">P(\omega) = 1</script></span>；</li>
+<li>可列可加性：设<span class="arithmatex"><span class="MathJax_Preview">A_1,A_2, \cdots</span><script type="math/tex">A_1,A_2, \cdots</script></span>是两两互不相容的事件，即对于<span class="arithmatex"><span class="MathJax_Preview">i \neq j,A_iA_j = \varnothing,i,j=1,2,\cdots</span><script type="math/tex">i \neq j,A_iA_j = \varnothing,i,j=1,2,\cdots</script></span>，有：<span class="arithmatex"><span class="MathJax_Preview">\displaystyle P(\bigcup_{i=1}^{\infty}A_i)= \sum_{i=1}^{\infty}P(A_i)</span><script type="math/tex">\displaystyle P(\bigcup_{i=1}^{\infty}A_i)= \sum_{i=1}^{\infty}P(A_i)</script></span></li>
+</ol>
+<p>对于不可重复试验，如果符合三个基本条件可以定义概率并称为主观概率</p>
+<p><strong>概率的性质</strong>:</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">P(\varnothing)=0</span><script type="math/tex">P(\varnothing)=0</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">P(A) \leqslant 1</span><script type="math/tex">P(A) \leqslant 1</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">P(\overline{A})=1-P(A)</span><script type="math/tex">P(\overline{A})=1-P(A)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">P(A-B)=P(A)-P(AB)</span><script type="math/tex">P(A-B)=P(A)-P(AB)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">P(A+B)=P(A)+P(B)-P(AB)</span><script type="math/tex">P(A+B)=P(A)+P(B)-P(AB)</script></span></li>
+</ul>
+<p>tips:
+<strong>零概率事件与不可能事件是不同的，只是不可能事件概率为0</strong> <em>在数轴任取一点的概率为0（或许可以理解为概率是无穷小），但是可能发生</em>。类似地，<strong>1概率事件与必然事件是不同的</strong>
+概率推不出事件</p>
+<h4 id="_5">概型</h4>
+<p><strong>古典（等可能）概型</strong>：
+1）试验的样本空间只含有有限个元素，即 <span class="arithmatex"><span class="MathJax_Preview">\Omega=\{\omega_1,\omega_2,\cdots,\omega_n\}</span><script type="math/tex">\Omega=\{\omega_1,\omega_2,\cdots,\omega_n\}</script></span>
+2）试验中每个基本事件发生的可能性相同，即 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle P(\{\omega_i\})=\frac{1}{n}</span><script type="math/tex">\displaystyle P(\{\omega_i\})=\frac{1}{n}</script></span></p>
+<p><strong>几何概型</strong>：
+在等可能性的情况下 <span class="arithmatex"><span class="MathJax_Preview">P(A)=tS(A)</span><script type="math/tex">P(A)=tS(A)</script></span>，样本空间有满足平面上的一区域（或直线上的一线段、空间上的一立体）的无限个元素，概率为 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle P(A)=\frac{S(A)}{S(\Omega)}</span><script type="math/tex">\displaystyle P(A)=\frac{S(A)}{S(\Omega)}</script></span></p>
+<h3 id="_6">条件概率</h3>
+<p><strong>条件概率</strong>：A发生的条件下（A的概率不为0），事件B发生的概率，记为<span class="arithmatex"><span class="MathJax_Preview">P(B|A)</span><script type="math/tex">P(B|A)</script></span>。若<span class="arithmatex"><span class="MathJax_Preview">P(A)&gt;0</span><script type="math/tex">P(A)>0</script></span>，则</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+P(B|A)=\frac{P(AB)}{P(A)}
+</div>
+<script type="math/tex; mode=display">
+P(B|A)=\frac{P(AB)}{P(A)}
+</script>
+</div>
+<p>定义 <code>样本空间的划分</code> 设 <span class="arithmatex"><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span> 为试验 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 的样本空间，<span class="arithmatex"><span class="MathJax_Preview">B_1,B_2,\cdots,B_n</span><script type="math/tex">B_1,B_2,\cdots,B_n</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 的一组事件，若 <span class="arithmatex"><span class="MathJax_Preview">B_iB_j=\varnothing,\bigcup\limits_{i=1}^n B_i=\Omega</span><script type="math/tex">B_iB_j=\varnothing,\bigcup\limits_{i=1}^n B_i=\Omega</script></span> ，则称，<span class="arithmatex"><span class="MathJax_Preview">B_1,B_2,\cdots,B_n</span><script type="math/tex">B_1,B_2,\cdots,B_n</script></span> 为样本空间的一个划分</p>
+<ul>
+<li><strong>乘法公式</strong> <span class="arithmatex"><span class="MathJax_Preview">P(AB)=P(B|A)P(A)=P(A|B)P(B)</span><script type="math/tex">P(AB)=P(B|A)P(A)=P(A|B)P(B)</script></span></li>
+<li><strong>全概率公式</strong> <span class="arithmatex"><span class="MathJax_Preview">\displaystyle P(A)=\sum_{i=1}^n P(A|B_i)P(B_i)</span><script type="math/tex">\displaystyle P(A)=\sum_{i=1}^n P(A|B_i)P(B_i)</script></span></li>
+<li><strong>贝叶斯Bayes公式</strong> <span class="arithmatex"><span class="MathJax_Preview">\displaystyle P(B_i|A)=\frac{P(A|B_i)P(B_i)}{\sum\limits_{j=1}^n P(A|B_j)P(B_j)}</span><script type="math/tex">\displaystyle P(B_i|A)=\frac{P(A|B_i)P(B_i)}{\sum\limits_{j=1}^n P(A|B_j)P(B_j)}</script></span></li>
+</ul>
+<h3 id="_7">事件的独立性</h3>
+<p><strong>事件独立</strong>：事件<span class="arithmatex"><span class="MathJax_Preview">A,B</span><script type="math/tex">A,B</script></span>独立指事件满足<span class="arithmatex"><span class="MathJax_Preview">P(AB)=P(A)P(B)</span><script type="math/tex">P(AB)=P(A)P(B)</script></span>
+n个事件<span class="arithmatex"><span class="MathJax_Preview">A_1,A_2,\cdots,A_n</span><script type="math/tex">A_1,A_2,\cdots,A_n</script></span>独立指其中任意两个、三个、<span class="arithmatex"><span class="MathJax_Preview">\cdots</span><script type="math/tex">\cdots</script></span>n个事件的积事件的概率都等于各事件概率之积
+无穷个事件独立指其中任意有限多个事件都相互独立</p>
+<ul>
+<li>若A，B相互独立，则<span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>与<span class="arithmatex"><span class="MathJax_Preview">\overline{B}</span><script type="math/tex">\overline{B}</script></span>，<span class="arithmatex"><span class="MathJax_Preview">\overline{A}</span><script type="math/tex">\overline{A}</script></span>与<span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>，<span class="arithmatex"><span class="MathJax_Preview">\overline{A}</span><script type="math/tex">\overline{A}</script></span>与<span class="arithmatex"><span class="MathJax_Preview">\overline{B}</span><script type="math/tex">\overline{B}</script></span>也分别相互独立</li>
+<li>若<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个事件相互独立，则将其中任何<span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>个事件换成相应的对立事件，形成的<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个新的事件仍相互独立</li>
+<li>若<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个事件相互独立，则其中至少有一个事件发生的概率为<span class="arithmatex"><span class="MathJax_Preview">\displaystyle P(\bigcup_{i=1}^n A_i)=1-\prod_{i=1}^n[1-P(A_i)]</span><script type="math/tex">\displaystyle P(\bigcup_{i=1}^n A_i)=1-\prod_{i=1}^n[1-P(A_i)]</script></span></li>
+</ul>
+<p>tips:
+互斥与独立：[[#事件的关系与运算|互斥]]是同一个样本空间，独立是不同样本空间，或同一样本空间不同事件。
+如果两事件发生的概率都不为0，那么它们互斥不独立，独立不互斥。
+零概率事件、1概率事件均与任何事件独立
+不可能事件与任何事件既独立又互斥</p>
+<h2 id="_8">一维随机变量及分布</h2>
+<p>将对随机事件的研究转化为对随机变量的研究，<strong><em>将事物抽象为数</em></strong> <span class="arithmatex"><span class="MathJax_Preview">X:\Omega\to \mathbb{R}</span><script type="math/tex">X:\Omega\to \mathbb{R}</script></span></p>
+<p><strong>定义 <code>一维随机变量</code></strong> 定义在样本空间上的实值单值函数 <span class="arithmatex"><span class="MathJax_Preview">X=X(\omega)</span><script type="math/tex">X=X(\omega)</script></span></p>
+<h3 id="_9">离散型随机变量</h3>
+<p>离散型随机变量：随机变量的全部取值只有<strong>有限个或可列无限个</strong></p>
+<p>离散型随机变量的<strong><em>分布律</em></strong>：<span class="arithmatex"><span class="MathJax_Preview">\displaystyle P\{X=x_k\}=p_k</span><script type="math/tex">\displaystyle P\{X=x_k\}=p_k</script></span></p>
+<p><strong>两点分布</strong> 随机变量只可能取0与1两个值，可用来描述一个伯努利试验（只有两个可能结果 <span class="arithmatex"><span class="MathJax_Preview">A,\overline{A}</span><script type="math/tex">A,\overline{A}</script></span> 的试验 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span>，<span class="arithmatex"><span class="MathJax_Preview">k=0,1</span><script type="math/tex">k=0,1</script></span>）</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+P\{X=k\}=p^k(1-p)^{1-k}
+</div>
+<script type="math/tex; mode=display">
+P\{X=k\}=p^k(1-p)^{1-k}
+</script>
+</div>
+<p><strong>二项分布</strong> n重伯努利试验的分布律，记为<span class="arithmatex"><span class="MathJax_Preview">X\sim b(n,p)</span><script type="math/tex">X\sim b(n,p)</script></span>（<span class="arithmatex"><span class="MathJax_Preview">k=0,1,2,\cdots,n</span><script type="math/tex">k=0,1,2,\cdots,n</script></span>）</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+P\{X=k\}=C_n^kp^k(1-p)^{n-k}
+</div>
+<script type="math/tex; mode=display">
+P\{X=k\}=C_n^kp^k(1-p)^{n-k}
+</script>
+</div>
+<p><strong>泊松分布</strong> n很大，p很小，np大小适中时二项分布的近似（<span class="arithmatex"><span class="MathJax_Preview">k=0,1,2,\cdots</span><script type="math/tex">k=0,1,2,\cdots</script></span>）</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+P\{X=k\}=\frac{\lambda^k e^{-\lambda}}{k!}
+</div>
+<script type="math/tex; mode=display">
+P\{X=k\}=\frac{\lambda^k e^{-\lambda}}{k!}
+</script>
+</div>
+<p><strong><em>泊松定理</em></strong>：在n重伯努利试验中，事件A在每次试验中发生的概率为<span class="arithmatex"><span class="MathJax_Preview">p_n</span><script type="math/tex">p_n</script></span>（与试验次数n有关），如果<span class="arithmatex"><span class="MathJax_Preview">n\to\infty</span><script type="math/tex">n\to\infty</script></span>时，<span class="arithmatex"><span class="MathJax_Preview">np_n\to\lambda</span><script type="math/tex">np_n\to\lambda</script></span>，则对任意给定的非负整数k，有<span class="arithmatex"><span class="MathJax_Preview">\displaystyle\lim_{n\to\infty}\binom{n}{k}p_n^k(1-p_n)^{n-k}=\frac{\lambda^k}{k!}e^{-\lambda}</span><script type="math/tex">\displaystyle\lim_{n\to\infty}\binom{n}{k}p_n^k(1-p_n)^{n-k}=\frac{\lambda^k}{k!}e^{-\lambda}</script></span></p>
+<h3 id="_10">连续型随机变量</h3>
+<p>连续型随机变量的 <strong><em>分布函数</em></strong> <span class="arithmatex"><span class="MathJax_Preview">F(x)</span><script type="math/tex">F(x)</script></span> :随机变量落在实数x左边的概率，即 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle F(x)=P\{X\leqslant x\}</span><script type="math/tex">\displaystyle F(x)=P\{X\leqslant x\}</script></span> 
+连续型随机变量的 <strong><em>概率密度函数</em></strong>  <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> :满足 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle F(x)=\int_{-\infty}^x f(t)dt</span><script type="math/tex">\displaystyle F(x)=\int_{-\infty}^x f(t)dt</script></span>  的非负函数</p>
+<p><strong>均匀分布</strong> <span class="arithmatex"><span class="MathJax_Preview">X\sim U(a,b)</span><script type="math/tex">X\sim U(a,b)</script></span></p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f(x)=
+\begin{cases}
+    \dfrac{1}{(b-a)}&amp;, a&lt;x&lt;b \\
+    0&amp;,others
+\end{cases}
+</div>
+<script type="math/tex; mode=display">
+f(x)=
+\begin{cases}
+    \dfrac{1}{(b-a)}&, a<x<b \\
+    0&,others
+\end{cases}
+</script>
+</div>
+<p><strong>指数分布</strong> <span class="arithmatex"><span class="MathJax_Preview">X\sim E(\lambda)</span><script type="math/tex">X\sim E(\lambda)</script></span></p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f(x)=
+\begin{cases}
+    \lambda e^{ -\lambda x }&amp;,x&gt;0 \\
+    0&amp;,x\leq 0
+\end{cases}
+</div>
+<script type="math/tex; mode=display">
+f(x)=
+\begin{cases}
+    \lambda e^{ -\lambda x }&,x>0 \\
+    0&,x\leq 0
+\end{cases}
+</script>
+</div>
+<p><strong>正态分布</strong> <span class="arithmatex"><span class="MathJax_Preview">X\sim N(\mu,\sigma^2)</span><script type="math/tex">X\sim N(\mu,\sigma^2)</script></span></p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}, -\infty&lt;x&lt;+\infty
+</div>
+<script type="math/tex; mode=display">
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}, -\infty<x<+\infty
+</script>
+</div>
+<p><span class="arithmatex"><span class="MathJax_Preview">N(0,1)</span><script type="math/tex">N(0,1)</script></span> 称为标准正态分布。若<span class="arithmatex"><span class="MathJax_Preview">X\sim N(\mu,\sigma^2)</span><script type="math/tex">X\sim N(\mu,\sigma^2)</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">Y=\dfrac{X-\mu}{\sigma}\sim N(0,1)</span><script type="math/tex">Y=\dfrac{X-\mu}{\sigma}\sim N(0,1)</script></span></p>
+<p><strong>幂律分布</strong>
+$$
+f(x,\alpha)=\begin{cases}
+    \dfrac{\alpha-1}{\theta}\left( \dfrac{x}{\theta} \right)^{-\alpha} &amp;,x\geq\theta&gt;0,\alpha&gt;1 \
+    0&amp;,x&lt;\theta
+\end{cases}
+$$</p>
+<h3 id="_11">随机变量的函数的分布</h3>
+<p>设随机变量<span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>具有概率密度<span class="arithmatex"><span class="MathJax_Preview">f_X(x)</span><script type="math/tex">f_X(x)</script></span>，<span class="arithmatex"><span class="MathJax_Preview">-\infty&lt;x&lt;+\infty</span><script type="math/tex">-\infty<x<+\infty</script></span>，函数<span class="arithmatex"><span class="MathJax_Preview">g(x)</span><script type="math/tex">g(x)</script></span>处处可导且恒有<span class="arithmatex"><span class="MathJax_Preview">g'(x)&gt;0</span><script type="math/tex">g'(x)>0</script></span>或<span class="arithmatex"><span class="MathJax_Preview">g'(x)&lt;0</span><script type="math/tex">g'(x)<0</script></span>，则<span class="arithmatex"><span class="MathJax_Preview">Y=g(X)</span><script type="math/tex">Y=g(X)</script></span>是连续型随机变量，其概率密度为(记<span class="arithmatex"><span class="MathJax_Preview">\alpha=\min\{g(-\infty),g(+\infty)\},\beta=\max\{g(-\infty),g(+\infty)\},h(x)</span><script type="math/tex">\alpha=\min\{g(-\infty),g(+\infty)\},\beta=\max\{g(-\infty),g(+\infty)\},h(x)</script></span>为<span class="arithmatex"><span class="MathJax_Preview">g(x)</span><script type="math/tex">g(x)</script></span>的反函数)</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f_Y(y)=
+\begin{cases}
+    f_X[h(y)]|h'(y)|&amp;,   \alpha&lt;y&lt;\beta     \\
+    0&amp;,others
+\end{cases}
+</div>
+<script type="math/tex; mode=display">
+f_Y(y)=
+\begin{cases}
+    f_X[h(y)]|h'(y)|&,   \alpha<y<\beta     \\
+    0&,others
+\end{cases}
+</script>
+</div>
+<blockquote>
+<p>求概率密度先求概率分布
+有<span class="arithmatex"><span class="MathJax_Preview">F_Y(y)=P\{Y\leqslant y\}=P\{g(X)\leqslant y\}</span><script type="math/tex">F_Y(y)=P\{Y\leqslant y\}=P\{g(X)\leqslant y\}</script></span>
+由<span class="arithmatex"><span class="MathJax_Preview">g(X)\leqslant y</span><script type="math/tex">g(X)\leqslant y</script></span>转化为关于<span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>的不等式，如<span class="arithmatex"><span class="MathJax_Preview">X_1\leqslant X\leqslant X_2</span><script type="math/tex">X_1\leqslant X\leqslant X_2</script></span>
+于是<span class="arithmatex"><span class="MathJax_Preview">F_Y(y)=P\{X_1\leqslant X\leqslant X_2\}=F_X(X_2)-F_X(X_1)</span><script type="math/tex">F_Y(y)=P\{X_1\leqslant X\leqslant X_2\}=F_X(X_2)-F_X(X_1)</script></span>
+两边求导可得<span class="arithmatex"><span class="MathJax_Preview">f_Y(y)=F'_Y(y)</span><script type="math/tex">f_Y(y)=F'_Y(y)</script></span></p>
+</blockquote>
+<h2 id="_12">多维随机变量及分布</h2>
+<p>定义在样本空间上的n个随机变量 <span class="arithmatex"><span class="MathJax_Preview">F:\Omega\to \mathbb{R}^n</span><script type="math/tex">F:\Omega\to \mathbb{R}^n</script></span></p>
+<h3 id="_13">二维离散型随机变量</h3>
+<p>边缘分布
+条件分布</p>
+<p>边缘分布不能唯一确定联合分布</p>
+<h3 id="_14">二维连续性随机变量</h3>
+<p>n维正态分布的概率密度函数：<span class="arithmatex"><span class="MathJax_Preview">f(x_{1},x_{2},\cdot,x_{n})=(2\pi)^{-\frac{n}{2}}|\boldsymbol{C}|^{-\frac{1}{2}}\exp \left\{ -\frac{1}{2}(\boldsymbol{X}-\boldsymbol{\mu})^{T}\boldsymbol{C}^{-1}(\boldsymbol{X}-\boldsymbol{\mu}) \right\}</span><script type="math/tex">f(x_{1},x_{2},\cdot,x_{n})=(2\pi)^{-\frac{n}{2}}|\boldsymbol{C}|^{-\frac{1}{2}}\exp \left\{ -\frac{1}{2}(\boldsymbol{X}-\boldsymbol{\mu})^{T}\boldsymbol{C}^{-1}(\boldsymbol{X}-\boldsymbol{\mu}) \right\}</script></span>
+其中 <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{X}=(x_{1},\cdots,x_{n})^{T}</span><script type="math/tex">\boldsymbol{X}=(x_{1},\cdots,x_{n})^{T}</script></span> ， <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\mu}=(\mu_{1},\cdots,\mu_{n})^{T}</span><script type="math/tex">\boldsymbol{\mu}=(\mu_{1},\cdots,\mu_{n})^{T}</script></span>，<span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{C}</span><script type="math/tex">\boldsymbol{C}</script></span> 为[[#矩|协方差矩阵]]</p>
+<h3 id="_15">随机变量的独立性</h3>
+<h3 id="_16">两个随机变量的函数的分布</h3>
+<h2 id="_17">随机变量的数字特征</h2>
+<h3 id="_18">数学期望</h3>
+<p><strong>定义 <code>数学期望</code></strong> 数学期望记作<span class="arithmatex"><span class="MathJax_Preview">E(X)</span><script type="math/tex">E(X)</script></span>
+离散型随机变量的期望（若该级数收敛）</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+E(X)=\sum_{i=1}^{\infty}x_ip_i
+</div>
+<script type="math/tex; mode=display">
+E(X)=\sum_{i=1}^{\infty}x_ip_i
+</script>
+</div>
+<p>连续型随机变量的期望（若该反常积分收敛）</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+E(X)=\int_{-\infty}^{+\infty}xf(x)dx
+</div>
+<script type="math/tex; mode=display">
+E(X)=\int_{-\infty}^{+\infty}xf(x)dx
+</script>
+</div>
+<p>二维离散型随机变量的期望（高维同理）</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+E(X)=\sum_{i=1}^{\infty}x_ip_{i\cdot}=\sum_{i=1}^{+\infty}\sum_{j=1}^{+\infty} x_ip_{ij}
+</div>
+<script type="math/tex; mode=display">
+E(X)=\sum_{i=1}^{\infty}x_ip_{i\cdot}=\sum_{i=1}^{+\infty}\sum_{j=1}^{+\infty} x_ip_{ij}
+</script>
+</div>
+<p>二维连续型随机变量的期望（高维同理）</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+E(X)=\int_{-\infty}^{+\infty}xf_X(x)dx=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xf(x,y)dxdy
+</div>
+<script type="math/tex; mode=display">
+E(X)=\int_{-\infty}^{+\infty}xf_X(x)dx=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xf(x,y)dxdy
+</script>
+</div>
+<ul>
+<li>离散型随机变量<span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>，<span class="arithmatex"><span class="MathJax_Preview">g(x)</span><script type="math/tex">g(x)</script></span>是实值连续函数，则 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle E[g(X)]=\sum_{i=1}^{\infty}g(x_i)p_i</span><script type="math/tex">\displaystyle E[g(X)]=\sum_{i=1}^{\infty}g(x_i)p_i</script></span>
+  连续型随机变量<span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>，<span class="arithmatex"><span class="MathJax_Preview">g(x)</span><script type="math/tex">g(x)</script></span>是实值连续函数，则 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle E[g(X)]=\int_{-\infty}^{+\infty}g(x)f(x)dx</span><script type="math/tex">\displaystyle E[g(X)]=\int_{-\infty}^{+\infty}g(x)f(x)dx</script></span></li>
+<li>数学期望的性质</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">E(C)=C</span><script type="math/tex">E(C)=C</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">E(CX)=CE(X)</span><script type="math/tex">E(CX)=CE(X)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">E(X+Y)=E(X)+E(Y)</span><script type="math/tex">E(X+Y)=E(X)+E(Y)</script></span>，可推广至有限个随机变量之和</li>
+<li>两个独立的随机变量，有<span class="arithmatex"><span class="MathJax_Preview">E(XY)=E(X)E(Y)</span><script type="math/tex">E(XY)=E(X)E(Y)</script></span></li>
+</ul>
+<p><strong>定义 <code>条件数学期望</code></strong> 若二维随机变量的条件分布的数学期望存在，则称为条件数学期望 
+条件期望 <span class="arithmatex"><span class="MathJax_Preview">E(X|Y=y)</span><script type="math/tex">E(X|Y=y)</script></span> 可以看成随机变量  <span class="arithmatex"><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 的函数，因此 <span class="arithmatex"><span class="MathJax_Preview">E(X|Y)</span><script type="math/tex">E(X|Y)</script></span> 本身也是个随机变量</p>
+<p><strong>重期望公式</strong> ：设 <span class="arithmatex"><span class="MathJax_Preview">(X,Y)</span><script type="math/tex">(X,Y)</script></span> 为二维随机变量，且 <span class="arithmatex"><span class="MathJax_Preview">E(X)</span><script type="math/tex">E(X)</script></span> 存在，则 <span class="arithmatex"><span class="MathJax_Preview">E(X)=E[E(X|Y)]</span><script type="math/tex">E(X)=E[E(X|Y)]</script></span></p>
+<h3 id="_19">方差</h3>
+<p><strong>定义 <code>方差</code></strong> 设<span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>是一个随机变量，若<span class="arithmatex"><span class="MathJax_Preview">E[X-E(X)]^2</span><script type="math/tex">E[X-E(X)]^2</script></span>存在，则称其为<span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>的<strong>方差</strong>，记为<span class="arithmatex"><span class="MathJax_Preview">D(X)</span><script type="math/tex">D(X)</script></span>。显然有<span class="arithmatex"><span class="MathJax_Preview">D(X)=E(X^2)-[E(X)]^2</span><script type="math/tex">D(X)=E(X^2)-[E(X)]^2</script></span>
+在应用中引入与随机变量具有相同量纲的量<span class="arithmatex"><span class="MathJax_Preview">\sigma(X)=\sqrt{D(X)}</span><script type="math/tex">\sigma(X)=\sqrt{D(X)}</script></span>，称为<strong>标准差</strong></p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">D(C)=0</span><script type="math/tex">D(C)=0</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">D(aX+b)=a^2D(X)</span><script type="math/tex">D(aX+b)=a^2D(X)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">D(X\pm Y)=D(X)+D(Y)\pm 2E\{[X-E(X)][Y-E(Y)]\}</span><script type="math/tex">D(X\pm Y)=D(X)+D(Y)\pm 2E\{[X-E(X)][Y-E(Y)]\}</script></span>
+  特别地，若<span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span>相互独立，<span class="arithmatex"><span class="MathJax_Preview">D(X\pm Y)=D(X)+D(Y)</span><script type="math/tex">D(X\pm Y)=D(X)+D(Y)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">D(X)=0\Longleftrightarrow P\{X=E(X)\}=1</span><script type="math/tex">D(X)=0\Longleftrightarrow P\{X=E(X)\}=1</script></span></li>
+</ul>
+<p><strong>标准化的随机变量</strong>:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+X^*=\frac{X-E(X)}{\sqrt{D(X)}}
+</div>
+<script type="math/tex; mode=display">
+X^*=\frac{X-E(X)}{\sqrt{D(X)}}
+</script>
+</div>
+<p>此时有，<span class="arithmatex"><span class="MathJax_Preview">E(X^*)=0,D(X^*)=1</span><script type="math/tex">E(X^*)=0,D(X^*)=1</script></span></p>
+<h4 id="_20">切比雪夫不等式</h4>
+<p>马尔可夫不等式：设<span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>是只取非负值的随机变量，则对于任意正数<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，有<span class="arithmatex"><span class="MathJax_Preview">\displaystyle P\{X\geqslant a\}\leqslant\frac{E(X)}{a}</span><script type="math/tex">\displaystyle P\{X\geqslant a\}\leqslant\frac{E(X)}{a}</script></span></p>
+<blockquote>
+<p>证明：<span class="arithmatex"><span class="MathJax_Preview">E(x)=\int_{0}^{+\infty}xf(x)dx\geqslant\int_{a}^{+\infty}xf(x)dx\geqslant\int_{a}^{+\infty}af(x)dx=a\int_{a}^{+\infty}f(x)dx=aP\{X\geqslant a\}</span><script type="math/tex">E(x)=\int_{0}^{+\infty}xf(x)dx\geqslant\int_{a}^{+\infty}xf(x)dx\geqslant\int_{a}^{+\infty}af(x)dx=a\int_{a}^{+\infty}f(x)dx=aP\{X\geqslant a\}</script></span></p>
+</blockquote>
+<p><strong>切比雪夫不等式</strong>：设随机变量<span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>，则对于任意正数<span class="arithmatex"><span class="MathJax_Preview">\varepsilon</span><script type="math/tex">\varepsilon</script></span>，有</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+P\{|X-E(X)|\geqslant\varepsilon\}\leqslant\frac{D(X)}{\varepsilon^2}
+</div>
+<script type="math/tex; mode=display">
+P\{|X-E(X)|\geqslant\varepsilon\}\leqslant\frac{D(X)}{\varepsilon^2}
+</script>
+</div>
+<blockquote>
+<p>证明：在马尔可夫不等式中，取<span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>为<span class="arithmatex"><span class="MathJax_Preview">[X-E(X)]^2</span><script type="math/tex">[X-E(X)]^2</script></span>，取<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>为<span class="arithmatex"><span class="MathJax_Preview">\varepsilon^2</span><script type="math/tex">\varepsilon^2</script></span>，即证</p>
+</blockquote>
+<h3 id="_21">协方差与相关系数</h3>
+<p>协方差与相关系数是描述两个随机变量之间的相关性的数字特征</p>
+<p><strong>定义 <code>协方差</code></strong> <span class="arithmatex"><span class="MathJax_Preview">E\{[X-E(X)][Y-E(Y)]\}</span><script type="math/tex">E\{[X-E(X)][Y-E(Y)]\}</script></span> 称为随机变量 <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> 的协方差，记为 <span class="arithmatex"><span class="MathJax_Preview">\text{cov}(X,Y)</span><script type="math/tex">\text{cov}(X,Y)</script></span></p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{cov}(X,Y)=E(XY)-E(X)E(Y)</span><script type="math/tex">\text{cov}(X,Y)=E(XY)-E(X)E(Y)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{cov}(X,X)=D(X)</span><script type="math/tex">\text{cov}(X,X)=D(X)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{cov}(X,Y)=\text{cov}(Y,X)</span><script type="math/tex">\text{cov}(X,Y)=\text{cov}(Y,X)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{cov}(aX,bY)=ab\text{cov}(X,Y)</span><script type="math/tex">\text{cov}(aX,bY)=ab\text{cov}(X,Y)</script></span> ，其中ab为常数</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{cov}(C,X)=0</span><script type="math/tex">\text{cov}(C,X)=0</script></span> ，其中C为常数</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{cov}(X_{1}+X_{2},Y)=\text{cov}(X_{1},Y)+\text{cov}(X_{2},Y)</span><script type="math/tex">\text{cov}(X_{1}+X_{2},Y)=\text{cov}(X_{1},Y)+\text{cov}(X_{2},Y)</script></span></li>
+<li>若随机变量相互独立，则 <span class="arithmatex"><span class="MathJax_Preview">\text{cov}(X,Y)=0</span><script type="math/tex">\text{cov}(X,Y)=0</script></span></li>
+</ul>
+<p><strong>定义 <code>相关系数</code></strong> 设随机变量 <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> 的的期望方差都存在，称  <span class="arithmatex"><span class="MathJax_Preview">\displaystyle \rho_{XY}=\frac{\text{cov}(X,Y)}{\sqrt{D(X)D(Y)}}</span><script type="math/tex">\displaystyle \rho_{XY}=\frac{\text{cov}(X,Y)}{\sqrt{D(X)D(Y)}}</script></span>为随机变量 <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> 的相关系数</p>
+<ul>
+<li>若 <span class="arithmatex"><span class="MathJax_Preview">\rho_{XY}=0</span><script type="math/tex">\rho_{XY}=0</script></span>，则称 <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> 不相关</li>
+<li>若 <span class="arithmatex"><span class="MathJax_Preview">\rho_{XY}=1</span><script type="math/tex">\rho_{XY}=1</script></span>，则称 <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> 完全正线性相关；若 <span class="arithmatex"><span class="MathJax_Preview">\rho_{XY}=-1</span><script type="math/tex">\rho_{XY}=-1</script></span>，则称 <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> 完全负线性相关</li>
+<li>其他情况则称 <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> 有一定程度线性关系，且绝对值越接近1，则线性相关程度越高</li>
+</ul>
+<p>tips:
+随机变量相互独立与不相关：随机变量 <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> [[#随机变量的独立性|相互独立]]是它们不相关的充分不必要条件
+特别地，当 <span class="arithmatex"><span class="MathJax_Preview">(X,Y)</span><script type="math/tex">(X,Y)</script></span> 服从二维正态分布时，它们相互独立与不相关是等价的</p>
+<h3 id="_22">矩</h3>
+<p><strong>定义 <code>矩</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> 是随机变量，若存在：
+<span class="arithmatex"><span class="MathJax_Preview">\mu_{k}=E(X^{k})</span><script type="math/tex">\mu_{k}=E(X^{k})</script></span> 称为 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 的k阶<strong>原点矩</strong>；
+ <span class="arithmatex"><span class="MathJax_Preview">\nu_{k}=E\{[X-E(X)]^{k}\}</span><script type="math/tex">\nu_{k}=E\{[X-E(X)]^{k}\}</script></span> 称为 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 的k阶<strong>中心矩</strong>；
+<span class="arithmatex"><span class="MathJax_Preview">E(X^{k}Y^{l})</span><script type="math/tex">E(X^{k}Y^{l})</script></span> 称为 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 的k+l阶<strong>混合原点矩</strong>；
+<span class="arithmatex"><span class="MathJax_Preview">E\{[X-E(X)]^{k}[Y-E(Y)]^{}\}</span><script type="math/tex">E\{[X-E(X)]^{k}[Y-E(Y)]^{}\}</script></span> 称为 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 的k+l阶<strong>混合中心矩</strong>。</p>
+<p><strong>定义 <code>协方差矩阵</code></strong> 设n维随机变量 <span class="arithmatex"><span class="MathJax_Preview">{X_{1},X_{2},\cdots,X_{n}}</span><script type="math/tex">{X_{1},X_{2},\cdots,X_{n}}</script></span> 的二阶混合中心矩 <span class="arithmatex"><span class="MathJax_Preview">c_{ij}=\text{cov}(X_{i},X_{j})</span><script type="math/tex">c_{ij}=\text{cov}(X_{i},X_{j})</script></span> 都存在，则称矩阵 <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{C}=\{c_{ij}\}</span><script type="math/tex">\boldsymbol{C}=\{c_{ij}\}</script></span> 为该n维随机变量的协方差矩阵</p>
+<h2 id="_23">大数定律和中心极限定理</h2>
+<h3 id="_24">大数定律</h3>
+<p><strong>定义 <code>依概率收敛</code></strong> 设 <span class="arithmatex"><span class="MathJax_Preview">Y_{1},Y_{2},\cdots,Y_{n},\cdots</span><script type="math/tex">Y_{1},Y_{2},\cdots,Y_{n},\cdots</script></span> 是一个随机变量序列，<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 是一个常数，若对于任何 <span class="arithmatex"><span class="MathJax_Preview">\varepsilon&gt;0</span><script type="math/tex">\varepsilon>0</script></span>，有
+$$
+\lim_{ n \to \infty } P{|Y_{n}-a|&lt;\varepsilon}=1
+$$
+则称序列依概率收敛于 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，记为 <span class="arithmatex"><span class="MathJax_Preview">Y_{n}\stackrel{P}{\longrightarrow}a</span><script type="math/tex">Y_{n}\stackrel{P}{\longrightarrow}a</script></span></p>
+<p>满足大数定律的随机变量有 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle\lim_{ n \to \infty }P\left\{ \left| \frac{1}{n} \sum_{i=1}^{n}X_{i}-\frac{1}{n}\sum_{i=1}^{n}E(X_{i})\right|&lt;\varepsilon \right\}=1</span><script type="math/tex">\displaystyle\lim_{ n \to \infty }P\left\{ \left| \frac{1}{n} \sum_{i=1}^{n}X_{i}-\frac{1}{n}\sum_{i=1}^{n}E(X_{i})\right|<\varepsilon \right\}=1</script></span></p>
+<p><strong>伯努利大数定律</strong> 设试验 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是可重复进行的，事件 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 在每次试验中出现的概率 <span class="arithmatex"><span class="MathJax_Preview">P(A)=p</span><script type="math/tex">P(A)=p</script></span>，将试验独立地进行n次，用 <span class="arithmatex"><span class="MathJax_Preview">n_{A}</span><script type="math/tex">n_{A}</script></span> 表示其中事件出现的次数，则 <span class="arithmatex"><span class="MathJax_Preview">\dfrac{n_{A}}{n}\stackrel{P}{\longrightarrow}p</span><script type="math/tex">\dfrac{n_{A}}{n}\stackrel{P}{\longrightarrow}p</script></span></p>
+<p><strong>切比雪夫大数定律的特殊情况</strong> 设随机变量 <span class="arithmatex"><span class="MathJax_Preview">X_{1},X_{2},\cdots,X_{n},\cdots</span><script type="math/tex">X_{1},X_{2},\cdots,X_{n},\cdots</script></span> 相互独立，且具有相同的数学期望和方差 <span class="arithmatex"><span class="MathJax_Preview">E(X_{k})=\mu,D(X_{k})=\sigma^{2}(k=1,2,\cdots)</span><script type="math/tex">E(X_{k})=\mu,D(X_{k})=\sigma^{2}(k=1,2,\cdots)</script></span> 。记 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle\overline{X}=\dfrac{1}{n}\sum_{k=1}^{n}X_{k}</span><script type="math/tex">\displaystyle\overline{X}=\dfrac{1}{n}\sum_{k=1}^{n}X_{k}</script></span> ，则 <span class="arithmatex"><span class="MathJax_Preview">\overline{X}\stackrel{P}{\longrightarrow}\mu</span><script type="math/tex">\overline{X}\stackrel{P}{\longrightarrow}\mu</script></span></p>
+<p><strong>辛钦大数定律</strong> 设随机变量 <span class="arithmatex"><span class="MathJax_Preview">X_{1},X_{2},\cdots,X_{n},\cdots</span><script type="math/tex">X_{1},X_{2},\cdots,X_{n},\cdots</script></span> 相互独立，且服从同一分布，具有数学期望 <span class="arithmatex"><span class="MathJax_Preview">E(X_{k})=\mu(k=1,2,\cdots)</span><script type="math/tex">E(X_{k})=\mu(k=1,2,\cdots)</script></span> 。记 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle\overline{X}=\dfrac{1}{n}\sum_{k=1}^{n}X_{k}</span><script type="math/tex">\displaystyle\overline{X}=\dfrac{1}{n}\sum_{k=1}^{n}X_{k}</script></span> ，则 <span class="arithmatex"><span class="MathJax_Preview">\overline{X}\stackrel{P}{\longrightarrow}\mu</span><script type="math/tex">\overline{X}\stackrel{P}{\longrightarrow}\mu</script></span></p>
+<h3 id="_25">中心极限定理</h3>
+<p><strong>独立同分布情形的中心极限定理</strong> 设随机变量 <span class="arithmatex"><span class="MathJax_Preview">X_{1},X_{2},\cdots,X_{n},\cdots</span><script type="math/tex">X_{1},X_{2},\cdots,X_{n},\cdots</script></span> 相互独立，服从同一分布，且具有相同的数学期望和方差 <span class="arithmatex"><span class="MathJax_Preview">E(X_{k})=\mu,D(X_{k})=\sigma^{2}(k=1,2,\cdots)</span><script type="math/tex">E(X_{k})=\mu,D(X_{k})=\sigma^{2}(k=1,2,\cdots)</script></span> ，则随机变量之和 <span class="arithmatex"><span class="MathJax_Preview">\sum_{i=1}^{n}X_{i}</span><script type="math/tex">\sum_{i=1}^{n}X_{i}</script></span> 的[[#方差|标准化的随机变量]]的分布函数 <span class="arithmatex"><span class="MathJax_Preview">F_{n(x)}</span><script type="math/tex">F_{n(x)}</script></span> 满足 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle\lim_{ n \to \infty }=\lim_{ n \to \infty }P\left\{ \frac{\sum_{i=1}^{n}X_{i}-n\mu}{\sqrt{n}\sigma} \leqslant x \right\}=\Phi(x)</span><script type="math/tex">\displaystyle\lim_{ n \to \infty }=\lim_{ n \to \infty }P\left\{ \frac{\sum_{i=1}^{n}X_{i}-n\mu}{\sqrt{n}\sigma} \leqslant x \right\}=\Phi(x)</script></span>。其中 <span class="arithmatex"><span class="MathJax_Preview">\Phi(x)</span><script type="math/tex">\Phi(x)</script></span> 是[[#连续型随机变量|标准正态分布]]的分布函数。</p>
+<p><strong>棣莫弗-拉普拉斯中心极限定理</strong> 设随机变量 <span class="arithmatex"><span class="MathJax_Preview">\eta_{n}\sim b(n,p)</span><script type="math/tex">\eta_{n}\sim b(n,p)</script></span> ，则 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle\lim_{ n \to \infty }P\left\{ \frac{\eta_{n}-np}{\sqrt{np(1-p)}}\leqslant x \right\}=\Phi(x)</span><script type="math/tex">\displaystyle\lim_{ n \to \infty }P\left\{ \frac{\eta_{n}-np}{\sqrt{np(1-p)}}\leqslant x \right\}=\Phi(x)</script></span></p>
+<h2 id="_26">样本及抽样分布</h2>
+<p>在一个统计问题中，研究的对象的全体称为<strong>总体</strong>，而把组成总体的每一个成员称为<strong>个体</strong>。总体中所包含的个体个数称为总体的<strong>容量</strong>。
+总体的分布一般是未知的，因此需要通过从总体中抽取一部分个体，根据获得的数据对总体的分布做出推断。被抽出的部分个体称为总体的一个<strong>样本</strong>，从总体中抽取若干个体的过程称为<strong>抽样</strong>，样本中所含个体数量称为<strong>样本容量</strong>，样本中的每个个体称为<strong>样品</strong>。
+要求样本具有随机性和独立性的抽样方法称为<strong>简单随机抽样</strong></p>
+<h3 id="_27">样本分布函数</h3>
+<p>定义 样本分布函数 设函数</p>
+<h4 id="_28">统计量</h4>
+<p>定义 <code>统计量</code> 若样本函数中不含有任何未知参数，则称为统计量</p>
+<ul>
+<li>样本均值</li>
+<li>样本方差</li>
+<li>样本标准差</li>
+<li>样本k阶原点矩</li>
+<li>样本k阶中心距</li>
+</ul>
+<blockquote>
+<p>样本方差
+无偏估计自由度</p>
+</blockquote>
+<h3 id="_29">抽样分布</h3>
+<p>统计量的分布称为抽样分布</p>
+<h4 id="_30">三个重要分布</h4>
+<p><span class="arithmatex"><span class="MathJax_Preview">\chi^2</span><script type="math/tex">\chi^2</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span></p>
+<h4 id="_31">正态总体统计量的分布</h4>
+<h2 id="_32">参数估计</h2>
+<h3 id="_33">点估计</h3>
+<p><strong>定义 <code>点估计</code></strong> 设</p>
+<hr />
+<p>估计方法
+<strong>矩估计法</strong>
+<strong>最大似然估计法</strong>
+贝叶斯法
+顺序统计量法</p>
+<hr />
+<p><strong>估计量的评选标准</strong> 无偏性、有效性、相合性</p>
+<h3 id="_34">区间估计</h3>
+<p><strong>定义 <code>置信区间</code></strong> 设总体<span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>的分布中含有未知参数<span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>，<span class="arithmatex"><span class="MathJax_Preview">\underline{\theta}(X_1,X_2,\cdots,X_n)</span><script type="math/tex">\underline{\theta}(X_1,X_2,\cdots,X_n)</script></span>和<span class="arithmatex"><span class="MathJax_Preview">\overline{\theta}(X_1,X_2,\cdots,X_n)</span><script type="math/tex">\overline{\theta}(X_1,X_2,\cdots,X_n)</script></span>是由样本<span class="arithmatex"><span class="MathJax_Preview">X_1,X_2,\cdots,X_n</span><script type="math/tex">X_1,X_2,\cdots,X_n</script></span>确定的两个统计量。对于给定的数<span class="arithmatex"><span class="MathJax_Preview">0&lt;\alpha&lt;1</span><script type="math/tex">0<\alpha<1</script></span>，如果对参数<span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>的任何值都有<span class="arithmatex"><span class="MathJax_Preview">P\{\underline{\theta}&lt;\theta&lt;\overline{\theta}\}\geqslant 1-\alpha</span><script type="math/tex">P\{\underline{\theta}<\theta<\overline{\theta}\}\geqslant 1-\alpha</script></span>，则称随机区间<span class="arithmatex"><span class="MathJax_Preview">(\underline{\theta},\overline{\theta})</span><script type="math/tex">(\underline{\theta},\overline{\theta})</script></span>为参数<span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>的<strong>置信水平</strong>为<span class="arithmatex"><span class="MathJax_Preview">1-\alpha</span><script type="math/tex">1-\alpha</script></span>的<strong>置信区间</strong>
+同理，<span class="arithmatex"><span class="MathJax_Preview">(\underline{\theta},+\infty)</span><script type="math/tex">(\underline{\theta},+\infty)</script></span>或<span class="arithmatex"><span class="MathJax_Preview">(-\infty,\overline{\theta})</span><script type="math/tex">(-\infty,\overline{\theta})</script></span>称为<strong>单侧置信区间</strong></p>
+<hr />
+<p>估计方法</p>
+<h4 id="_35">正态总体参数的区间估计</h4>
+<h4 id="_36">非正态总体参数的区间估计</h4>
+<h2 id="_37">假设检验</h2>
+<p><strong>小概率原理</strong>：如果小概率事件在一次试验中发生了，有理由怀疑试验的原定条件不成立
+<strong>概率反证法</strong>：</p>
+<p>若小概率事件的概率不超过<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>，则称其为<strong>显著性水平</strong>
+拒绝域</p>
+<h3 id="_38">正态总体均值的检验</h3>
+<p>u
+t</p>
+<h3 id="_39">正态总体方差的检验</h3>
+<p><span class="arithmatex"><span class="MathJax_Preview">\chi^2</span><script type="math/tex">\chi^2</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span></p>
+<h3 id="_40">大样本检验</h3>
+<h3 id="p">p值检验</h3>
+<h3 id="_41">假设检验的两类错误</h3>
+<h3 id="_42">非参数假设检验</h3>
+<h2 id="_43">线性回归分析与方差分析</h2>
+<p>一元线性回归模型</p>
+<p><strong>最小二乘法</strong>，选择，使得最小</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\hat{y}=\hat{a}+\hat{b}x</span><script type="math/tex">\hat{y}=\hat{a}+\hat{b}x</script></span></p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\hat{b}=\frac{\sum\limits_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sum\limits_{i=1}^n(x_i-\overline{x})^2}\\
+\hat{a}=\overline{y}-\hat{b}\overline{x}\\
+\hat{\sigma}^2=\frac{1}{n-2}\sum_{i=1}^n(y_i-\hat{a}-\hat{b}\overline{x_i})^2
+</div>
+<script type="math/tex; mode=display">
+\hat{b}=\frac{\sum\limits_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sum\limits_{i=1}^n(x_i-\overline{x})^2}\\
+\hat{a}=\overline{y}-\hat{b}\overline{x}\\
+\hat{\sigma}^2=\frac{1}{n-2}\sum_{i=1}^n(y_i-\hat{a}-\hat{b}\overline{x_i})^2
+</script>
+</div>
+<p>假设检验
+区间估计</p>
+<p>有时样本点明显不在一条直线附近，<em>例如满足幂函数分布，可以两边取对数转化为线性</em></p>
+<p>方差分析</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.tabs", "content.code.copy", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>
